@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Management</title>
+</head>
+<body>
+    {% for recipe in recipe %}
+        {{ recipe.recipe_title }}<br>
+        {{ recipe.ingredients }}<br>
+        {{ recipe.material_items }}<br>
+        {{ recipe.method }}<br>
+        {{ recipe.category }}<br>
+        {{ recipe.image_link }}<br>
+        {{ recipe.submitted_by }}<br>
+        {{ recipe.date_submitted }}<br>
+    {% endfor %}   
+</body>
+</html>
