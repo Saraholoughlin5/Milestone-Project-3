@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>Extension of base.html template test</h2>
-
     {% for recipe in recipe %}
         {{ recipe.recipe_title }}<br>
         {{ recipe.ingredients }}<br>
