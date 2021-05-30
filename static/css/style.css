@@ -2,3 +2,13 @@
     text-shadow: 2px 2px 2px rgba(0,0,0,0.5)
 }
 
+.brand-logo {
+    font-family: 'Pattaya', sans-serif;
+    margin-left: 1em;
+}
+
+.brand-text {
+    font-family: 'Pattaya', sans-serif;
+    margin-left: 1em;
+}
+
