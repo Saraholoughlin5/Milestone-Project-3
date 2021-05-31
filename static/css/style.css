@@ -4,11 +4,14 @@
 
 .brand-logo {
     font-family: 'Pattaya', sans-serif;
-    margin-left: 1em;
+    padding-left: 1em;
 }
 
 .brand-text {
     font-family: 'Pattaya', sans-serif;
-    margin-left: 1em;
+    padding-left: 1em;
 }
 
+.brand-icon {
+    line-height: 2.4;
+}

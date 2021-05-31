@@ -23,7 +23,7 @@
         <!-- navbar -->
         <nav class="nav-extended text-shadow red lighten-3">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_recipe') }}" class="brand-logo">Kooky</a>
+                <a href="{{ url_for('get_recipe') }}" class="brand-logo">Kooky <i class="fas fa-cookie-bite fa-xs brand-icon"></i></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_recipe') }}">Home</a></li>
@@ -38,7 +38,7 @@
 
         <!-- mobile nav menu -->
         <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="red-text text-lighten-2 brand-text">Kooky</h4></li>
+            <li><h4 class="left-align red-text text-lighten-2 brand-text"><i class="fas fa-cookie-bite fa-xs"></i> Kooky</h4></li>
             <li><a href="{{ url_for('get_recipe') }}">Home</a></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">Add Recipe</a></li>
