@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-image: url("/static/img/background.jpg");
+    background-attachment: fixed;
 }
 
 nav {
@@ -36,4 +36,8 @@ nav {
     font-size: 16pt;
     font-weight: bold;
     line-height: 3;
+}
+
+.card-panel {
+    margin-top: 3em;
 }
