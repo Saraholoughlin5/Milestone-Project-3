@@ -29,3 +29,10 @@ nav {
     font-family: 'Montserrat', sans-serif;
     border-radius: 12px;
 }
+
+.flashes h4 {
+    color: white;
+    font-size: 16pt;
+    font-weight: bold;
+    line-height: 3;
+}

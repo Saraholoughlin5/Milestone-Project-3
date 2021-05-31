@@ -32,7 +32,7 @@ def join():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Username not available, already exists")
+            flash("WARNING: Username Not Available")
             return redirect(url_for("join"))
 
         join = {

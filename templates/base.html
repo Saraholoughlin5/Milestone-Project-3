@@ -48,8 +48,23 @@
         </ul>
     </header>
 
-    {% block content %}
-    {% endblock %}
+    <section>
+        <!-- flash messages for 'join' page -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h4 class="col s12 m4 offset-m4 center-align purple-text text-darken-3 amber lighten-2">{{ message }}</h4>
+                    </div>
+                {% endfor%}
+            {% endif %}
+        {% endwith %}
+    </section>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
