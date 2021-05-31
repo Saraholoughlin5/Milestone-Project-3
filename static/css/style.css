@@ -2,8 +2,12 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+nav {
+    font-weight: bold;
+}
+
 .text-shadow {
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.5)
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 }
 
 .brand-text {
@@ -18,4 +22,11 @@ body {
 
 .brand-icon {
     line-height: 2.4;
+}
+
+.btn-large {
+    font-weight: bold;
+    font-size: 14pt;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 12px;
 }
