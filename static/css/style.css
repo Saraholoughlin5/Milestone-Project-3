@@ -12,16 +12,15 @@ nav {
 
 .brand-text {
     font-family: 'Pattaya', sans-serif;
-    padding-left: 1em;
 }
 
 .brand-logo {
     font-family: 'Pattaya', sans-serif;
-    padding-left: 1em;
 }
 
 .brand-icon {
     line-height: 2.4;
+    padding-left: 1em;
 }
 
 .btn-large {

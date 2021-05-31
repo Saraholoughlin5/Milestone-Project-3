@@ -27,6 +27,22 @@ def get_recipe():
 
 @app.route("/join", methods=["GET", "POST"])
 def join():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username not available, already exists")
+            return redirect(url_for("join"))
+
+        join = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(join)
+
+        session["user"] = request.form.get("username").lower()
+        flash("Thank you for joining Kooky!")
     return render_template("join.html")
 
 
