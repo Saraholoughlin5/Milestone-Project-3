@@ -22,9 +22,9 @@
 
     <header>
         <!-- navbar -->
-        <nav class="nav-extended text-shadow red lighten-3">
+        <nav class="nav-extended red lighten-3">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_recipe') }}" class="brand-logo left">Kooky <i
+                <a href="{{ url_for('get_recipe') }}" class="brand-logo text-shadow left">Kooky <i
                         class="fas fa-cookie-bite fa-xs brand-icon"></i></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
@@ -41,8 +41,8 @@
         <!-- mobile nav menu -->
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <h4 class="left-align red-text text-lighten-2 brand-text"><i
-                        class="fas fa-cookie-bite fa-xs brand-icon"></i> Kooky</h4>
+                <h3 class="left-align red-text text-lighten-2 brand-text"><i
+                        class="fas fa-cookie-bite fa-xs brand-icon"></i> Kooky</h3>
             </li>
             <li><a href="{{ url_for('get_recipe') }}">Home</a></li>
             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>

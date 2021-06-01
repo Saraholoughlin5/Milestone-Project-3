@@ -11,23 +11,29 @@ nav {
     font-weight: bold;
 }
 
+nav .brand-logo {
+    font-size: 2.5rem;
+}
+
+nav ul a {
+    font-size: 1.2rem;
+}
+
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
 }
 
 .brand-text {
     font-family: 'Pattaya', sans-serif;
-    font-size: 24pt;
 }
 
 .brand-logo {
     font-family: 'Pattaya', sans-serif;
-    font-size: 30pt;
 }
 
 .brand-icon {
     line-height: 2.4;
-    padding-left: 1em;
+    padding-left: 0.75rem;
 }
 
 .btn-large {
