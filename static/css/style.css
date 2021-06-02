@@ -55,6 +55,14 @@ nav ul a {
     font-size: 2rem;
 }
 
+.collapsible-body {
+    color: darkolivegreen;
+}
+
+h5 {
+    font-family: 'Pattaya', sans-serif;
+}
+
 .card-panel {
     margin-top: 3em;
 }

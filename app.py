@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_recipe")
 def get_recipe():
-    recipe = mongo.db.recipe.find()
+    recipe = list(mongo.db.recipe.find())
     return render_template("recipe.html", recipe=recipe)
 
 

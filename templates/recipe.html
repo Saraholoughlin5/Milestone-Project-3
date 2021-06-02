@@ -13,22 +13,24 @@
 {% endfor %}
 
     <ul class="collapsible">
+        {% for recipe in recipe %}
         <li class="active">
-            <div class="collapsible-header red-text text-lighten-2">Wrap</div>
-            <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header red-text text-lighten-2">
+                {{ recipe.recipe_title }}</div>
+            <div class="collapsible-body white">
+                <h5>Ingredients</h5>
+                <p>{{ recipe.ingredients }}</p>
+                <h5>Materials</h5>
+                <p>{{ recipe.material_items }}</p>
+                <h5>Method</h5>
+                <p>{{ recipe.method }}</p>
+                <h5>Category: </h5><p>{{ recipe.category }}</p>
+                <h5>Image link: </h5><p>{{ recipe.image_link }}</p>
+                <h5>Submitted by: </h5><p>{{ recipe.submitted_by }}</p>
+                <h5>Date submitted: </h5><p>{{ recipe.date_submitted }}</p>
+            </div>
         </li>
-        <li>
-            <div class="collapsible-header red-text text-lighten-2">Cookies</div>
-            <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header red-text text-lighten-2">Fruit Salad Skewers</div>
-            <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header red-text text-lighten-2">Noodles</div>
-            <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% endfor %}
     </ul>
 
 {% endblock %}
