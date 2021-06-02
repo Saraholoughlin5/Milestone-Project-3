@@ -50,6 +50,11 @@ nav ul a {
     line-height: 3;
 }
 
+.collapsible-header {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 2rem;
+}
+
 .card-panel {
     margin-top: 3em;
 }

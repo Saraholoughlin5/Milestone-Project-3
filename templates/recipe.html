@@ -2,14 +2,33 @@
 {% block content %}
 
     {% for recipe in recipe %}
-        {{ recipe.recipe_title }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.material_items }}<br>
-        {{ recipe.method }}<br>
-        {{ recipe.category }}<br>
-        {{ recipe.image_link }}<br>
-        {{ recipe.submitted_by }}<br>
-        {{ recipe.date_submitted }}<br>
-    {% endfor %}   
+    {{ recipe.recipe_title }}<br>
+    {{ recipe.ingredients }}<br>
+    {{ recipe.material_items }}<br>
+    {{ recipe.method }}<br>
+    {{ recipe.category }}<br>
+    {{ recipe.image_link }}<br>
+    {{ recipe.submitted_by }}<br>
+    {{ recipe.date_submitted }}<br>
+{% endfor %}
+
+    <ul class="collapsible">
+        <li class="active">
+            <div class="collapsible-header red-text text-lighten-2">Wrap</div>
+            <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header red-text text-lighten-2">Cookies</div>
+            <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header red-text text-lighten-2">Fruit Salad Skewers</div>
+            <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header red-text text-lighten-2">Noodles</div>
+            <div class="collapsible-body white"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+    </ul>
 
 {% endblock %}
