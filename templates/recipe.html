@@ -28,16 +28,19 @@
                 <p>{{ recipe.material_items }}</p>
                 <h5>Method</h5>
                 <p>{{ recipe.method }}</p>
+                <td><span class="subhead1">Category:</span> {{ recipe.category }}</td>
                 <div class="imgstyle">
                     <img class="responsive-img limit-height" src="{{ recipe.image_link }}" target="_blank">
                 </div>
                 <table>
+                    <tr>
+                        <td></td>
+                    </tr>
                 <tr>
-                    <td><span class="subhead">Category:</span> {{ recipe.category }}</td>
+                    <td><span class="subhead2">Submitted by:</span> {{ recipe.submitted_by }}</td>
                 </tr>
                 <tr>
-                    <td><span class="subhead">Submitted by:</span> {{ recipe.submitted_by }}</td>
-                    <td><span class="subhead">Date submitted:</span> {{ recipe.date_submitted }}</td>
+                    <td><span class="subhead2">Date submitted:</span> {{ recipe.date_submitted }}</td>
                 </tr>
                 </table>
             </div>

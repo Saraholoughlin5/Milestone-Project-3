@@ -63,10 +63,20 @@ nav ul a {
     color: darkolivegreen;
 }
 
-.subhead {
+.subhead1 {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 1.5rem;
+    color: darkolivegreen; 
+}
+
+.subhead2 {
     font-family: 'Pattaya', sans-serif;
     font-size: 1.3rem;
     color: darkolivegreen;
+}
+
+.imgstyle {
+    margin-top: 3rem;
 }
 
 table tr {
