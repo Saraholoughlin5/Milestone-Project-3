@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!--
     {% for recipe in recipe %}
     {{ recipe.recipe_title }}<br>
     {{ recipe.ingredients }}<br>
@@ -11,7 +11,8 @@
     {{ recipe.submitted_by }}<br>
     {{ recipe.date_submitted }}<br>
 {% endfor %}
-
+-->
+<div class="row mainpg">
     <ul class="collapsible">
         {% for recipe in recipe %}
         <li class="active">
@@ -24,13 +25,19 @@
                 <p>{{ recipe.material_items }}</p>
                 <h5>Method</h5>
                 <p>{{ recipe.method }}</p>
-                <h5>Category: </h5><p>{{ recipe.category }}</p>
-                <h5>Image link: </h5><p>{{ recipe.image_link }}</p>
-                <h5>Submitted by: </h5><p>{{ recipe.submitted_by }}</p>
-                <h5>Date submitted: </h5><p>{{ recipe.date_submitted }}</p>
+                <table>
+                <tr>
+                    <td><span class="subhead">Category:</span> {{ recipe.category }}</td>
+                    <td><span class="subhead">Image link:</span> {{ recipe.image_link }}</td>
+                </tr>
+                <tr>
+                    <td><span class="subhead">Submitted by:</span> {{ recipe.submitted_by }}</td>
+                    <td><span class="subhead">Date submitted:</span> {{ recipe.date_submitted }}</td>
+                </tr>
+                </table>
             </div>
         </li>
         {% endfor %}
     </ul>
-
+</div>
 {% endblock %}
