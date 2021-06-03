@@ -50,6 +50,10 @@ nav ul a {
     line-height: 3;
 }
 
+.recipespg {
+    min-height: 75rem;
+}
+
 .collapsible-header {
     font-family: 'Pattaya', sans-serif;
     font-size: 2rem;
@@ -71,4 +75,11 @@ table tr {
 
 h5 {
     font-family: 'Pattaya', sans-serif;
+}
+
+.limit-height {
+    max-height: 25rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

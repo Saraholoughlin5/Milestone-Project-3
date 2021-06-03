@@ -5,79 +5,86 @@
     <div class="card-panel">
         <h3 class="brand-text red-text text-lighten-2 center-align">Add a Recipe to Kooky</h3>
 
-<div class="row">
-    <form class="col s12">
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-book prefix"></i>
-                <input id="icon_prefix" type="text" class="validate" required>
-                <label for="icon_prefix">Recipe Title</label>
-                <span class="helper-text">
-                    (Please capitalise the first letter of each word)</span>
+        <div class="row card-panel">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-book prefix"></i>
+                        <input id="icon_prefix" type="text" class="validate" required>
+                        <label for="icon_prefix">Recipe Title</label>
+                        <span class="helper-text">
+                            (Please capitalise the first letter of each word)</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-carrot prefix"></i>
+                        <input id="icon_prefix" type="text" class="validate" required>
+                        <label for="icon_prefix">Ingredients</label>
+                        <span class="helper-text">
+                            (Separate with a comma. Include quantity/measurements)</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-utensil-spoon prefix"></i>
+                        <input id="icon_prefix" type="text" class="validate" required>
+                        <label for="icon_prefix">Materials</label>
+                        <span class="helper-text">
+                            (Separate items with a comma)</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-list-ol prefix"></i>
+                        <textarea id="textarea2" type="text" class="materialize-textarea validate" data-length="300"
+                            required></textarea>
+                        <label for="textarea2">Method</label>
+                        <span class="helper-text">
+                            (One numbered step per line)</span>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-th-large prefix"></i>
+                    <select>
+                        <option value="" disabled selected>Choose a Category</option>
+                        <option value="1">Fruit</option>
+                        <option value="2">Veggies</option>
+                        <option value="3">Sandwiches</option>
+                        <option value="4">Desserts</option>
+                    </select>
+                    <label for="icon_prefix">Category</label>
+                    <span class="helper-text">
+                            (Select from the drop-down menu)</span>
+                </div>
             </div>
+            
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-image prefix"></i>
+                        <input id="icon_prefix" type="text" class="validate" required>
+                        <label for="icon_prefix">Image link</label>
+                        <span class="helper-text">
+                            (Add a link to your creation here, e.g. Instagram post)</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 m6">
+                        <i class="fas fa-user-circle prefix"></i>
+                        <input id="icon_prefix" type="text" class="validate" required>
+                        <label for="icon_prefix">Submitted by</label>
+                    </div>
+                    <div class="input-field col s6 m6">
+                        <i class="fas fa-calendar-alt prefix"></i>
+                        <input id="icon_prefix" type="text" class="validate" required>
+                        <label for="icon_prefix">Date submitted</label>
+                    </div>
+                </div>
         </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-carrot prefix"></i>
-                <input id="icon_prefix" type="text" class="validate" required>
-                <label for="icon_prefix">Ingredients</label>
-                <span class="helper-text">
-                    (Separate with a comma. Include quantity/measurements)</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-utensil-spoon prefix"></i>
-                <input id="icon_prefix" type="text" class="validate" required>
-                <label for="icon_prefix">Materials</label>
-                <span class="helper-text">
-                    (Separate items with a comma)</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-list-ol prefix"></i>
-                <textarea id="textarea2" type="text" class="materialize-textarea validate" 
-                    data-length="300" required></textarea>
-                <label for="textarea2">Method</label>
-                <span class="helper-text">
-                    (One numbered step per line)</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-th-large prefix"></i>
-                <input id="icon_prefix" type="text" class="validate" required>
-                <label for="icon_prefix">Category</label>
-                <span class="helper-text">
-                    (Enter one of the following: Fruit, Vegetable, Sandwich, Dessert)</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-image prefix"></i>
-                <input id="icon_prefix" type="text" class="validate" required>
-                <label for="icon_prefix">Image link</label>
-                <span class="helper-text">
-                    (Add a link to your creation here, e.g. Instagram post)</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s6 m6">
-                <i class="fas fa-user-circle prefix"></i>
-                <input id="icon_prefix" type="text" class="validate" required>
-                <label for="icon_prefix">Submitted by</label>
-            </div>
-            <div class="input-field col s6 m6">
-                <i class="fas fa-calendar-alt prefix"></i>
-                <input id="icon_prefix" type="text" class="validate" required>
-                <label for="icon_prefix">Date submitted</label>
-            </div>
-        </div>
+        </form>
     </div>
-    </form>
-    </div>
-    </div>
+</div>
 </div>
 
 {% endblock %}

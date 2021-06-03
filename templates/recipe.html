@@ -12,7 +12,10 @@
     {{ recipe.date_submitted }}<br>
 {% endfor %}
 -->
-<div class="row mainpg">
+<div class="row card-panel recipespg">
+
+    <h3 class="brand-text red-text text-lighten-2 center-align">Kooky Recipes</h3>
+
     <ul class="collapsible">
         {% for recipe in recipe %}
         <li class="active">
@@ -25,10 +28,12 @@
                 <p>{{ recipe.material_items }}</p>
                 <h5>Method</h5>
                 <p>{{ recipe.method }}</p>
+                <div class="imgstyle">
+                    <img class="responsive-img limit-height" src="{{ recipe.image_link }}" target="_blank">
+                </div>
                 <table>
                 <tr>
                     <td><span class="subhead">Category:</span> {{ recipe.category }}</td>
-                    <td><span class="subhead">Image link:</span> {{ recipe.image_link }}</td>
                 </tr>
                 <tr>
                     <td><span class="subhead">Submitted by:</span> {{ recipe.submitted_by }}</td>
