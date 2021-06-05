@@ -22,13 +22,13 @@
             <div class="collapsible-header red-text text-lighten-2">
                 {{ recipe.recipe_title }}</div>
             <div class="collapsible-body white">
-                <h5>Ingredients</h5>
+                <h5 class="teal-text text-lighten-1">Ingredients</h5>
                 <p>{{ recipe.ingredients }}</p>
-                <h5>Materials</h5>
+                <h5 class="teal-text text-lighten-1">Materials</h5>
                 <p>{{ recipe.material_items }}</p>
-                <h5>Method</h5>
+                <h5 class="teal-text text-lighten-1">Method</h5>
                 <p>{{ recipe.method }}</p>
-                <td><span class="subhead1">Category:</span> {{ recipe.category }}</td>
+                <span class="subhead1 teal-text text-lighten-1">Category:</span><span> {{ recipe.category }}</span>
                 <div class="imgstyle">
                     <img class="responsive-img limit-height" src="{{ recipe.image_link }}" target="_blank">
                     <p class="sub-details">(Submitted by {{ recipe.submitted_by }} on {{ recipe.date_submitted }})</p>
