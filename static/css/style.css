@@ -58,6 +58,11 @@ nav ul a {
     min-height: 75rem;
 }
 
+.sub-details {
+    text-align: center;
+    font-size: 80%;
+}
+
 .collapsible-header {
     font-family: 'Pattaya', sans-serif;
     font-size: 2rem;

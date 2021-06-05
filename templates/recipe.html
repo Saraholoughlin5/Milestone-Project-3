@@ -31,18 +31,8 @@
                 <td><span class="subhead1">Category:</span> {{ recipe.category }}</td>
                 <div class="imgstyle">
                     <img class="responsive-img limit-height" src="{{ recipe.image_link }}" target="_blank">
+                    <p class="sub-details">(Submitted by {{ recipe.submitted_by }} on {{ recipe.date_submitted }})</p>
                 </div>
-                <table>
-                    <tr>
-                        <td></td>
-                    </tr>
-                <tr>
-                    <td><span class="subhead2">Submitted by:</span> {{ recipe.submitted_by }}</td>
-                </tr>
-                <tr>
-                    <td><span class="subhead2">Date submitted:</span> {{ recipe.date_submitted }}</td>
-                </tr>
-                </table>
             </div>
         </li>
         {% endfor %}
