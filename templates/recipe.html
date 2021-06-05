@@ -23,11 +23,11 @@
                 {{ recipe.recipe_title }}</div>
             <div class="collapsible-body white">
                 <h5 class="teal-text text-lighten-1">Ingredients</h5>
-                <p>{{ recipe.ingredients }}</p>
+                <p class="wrap">{{ recipe.ingredients }}</p>
                 <h5 class="teal-text text-lighten-1">Materials</h5>
-                <p>{{ recipe.material_items }}</p>
+                <p class="wrap">{{ recipe.material_items }}</p>
                 <h5 class="teal-text text-lighten-1">Method</h5>
-                <p>{{ recipe.method }}</p>
+                <p class="wrap">{{ recipe.method }}</p>
                 <span class="subhead1 teal-text text-lighten-1">Category:</span><span> {{ recipe.category }}</span>
                 <div class="imgstyle">
                     <img class="responsive-img limit-height" src="{{ recipe.image_link }}" target="_blank">
