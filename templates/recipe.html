@@ -29,7 +29,9 @@
                 {% endif %}   
                 </div>
                 <div class="col s2">
+                    {% if session.user|lower == recipe.submitted_by|lower %}
                     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small white black-text edit-btn">Edit</a>
+                    {% endif %}
                 </div>
             </div>              
             <div class="collapsible-body white">
@@ -44,7 +46,9 @@
                     <img class="responsive-img limit-height" src="{{ recipe.image_link }}" target="_blank">
                     <p class="sub-details">(Submitted by {{ recipe.submitted_by }} on {{ recipe.date_submitted }})</p>
                 </div>
+                {% if session.user|lower == recipe.submitted_by|lower %}
                 <a href="" class="btn white black-text">Delete Recipe</a>
+                {% endif %}
             </div>
         </li>
         {% endfor %}
