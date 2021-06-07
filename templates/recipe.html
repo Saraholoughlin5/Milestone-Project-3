@@ -23,10 +23,13 @@
                 <div class="col s1">
                     <i class="fas fa-caret-down"></i>
                 </div>
-                <div class="col s11">{{ recipe.recipe_title }}
+                <div class="col s9">{{ recipe.recipe_title }}
                 {% if recipe.has_allergens == "on" %}
                     <i class="fas fa-exclamation teal-text text-lighten-1 tooltipped" data-position="top" data-tooltip="Contains allergens"></i>
                 {% endif %}   
+                </div>
+                <div class="col s2">
+                    <a href="" class="btn-small white black-text edit-btn">Edit</a>
                 </div>
             </div>              
             <div class="collapsible-body white">
@@ -41,6 +44,7 @@
                     <img class="responsive-img limit-height" src="{{ recipe.image_link }}" target="_blank">
                     <p class="sub-details">(Submitted by {{ recipe.submitted_by }} on {{ recipe.date_submitted }})</p>
                 </div>
+                <a href="" class="btn white black-text">Delete Recipe</a>
             </div>
         </li>
         {% endfor %}

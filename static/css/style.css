@@ -125,3 +125,7 @@ h5 {
 .hide {
     display: none;
 }
+
+.edit-btn {
+    font-family: 'Montserrat', sans-serif;
+}
