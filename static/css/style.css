@@ -110,6 +110,11 @@ h5 {
     white-space: pre-line;
 }
 
+.switch {
+    margin-left: 2rem !important;
+    margin-bottom: 2rem;
+}
+
 .limit-height {
     max-height: 25rem;
     display: block;

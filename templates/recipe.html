@@ -25,7 +25,7 @@
                 </div>
                 <div class="col s11">{{ recipe.recipe_title }}
                 {% if recipe.has_allergens == "on" %}
-                    <i class="fas fa-exclamation teal-text text-lighten-1"></i>
+                    <i class="fas fa-exclamation teal-text text-lighten-1 tooltipped" data-position="top" data-tooltip="Contains allergens"></i>
                 {% endif %}   
                 </div>
             </div>              
