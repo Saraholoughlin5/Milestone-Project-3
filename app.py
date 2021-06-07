@@ -25,6 +25,13 @@ def get_recipe():
     return render_template("recipe.html", recipe=recipe)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipe = list(mongo.db.recipe.find({"$text": {"$search": query}}))
+    return render_template("recipe.html", recipe=recipe)
+    
+
 @app.route("/join", methods=["GET", "POST"])
 def join():
     if request.method == "POST":
