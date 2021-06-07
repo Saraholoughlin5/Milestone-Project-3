@@ -47,7 +47,7 @@
                     <p class="sub-details">(Submitted by {{ recipe.submitted_by }} on {{ recipe.date_submitted }})</p>
                 </div>
                 {% if session.user|lower == recipe.submitted_by|lower %}
-                <a href="" class="btn white black-text">Delete Recipe</a>
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn white black-text">Delete Recipe</a>
                 {% endif %}
             </div>
         </li>
