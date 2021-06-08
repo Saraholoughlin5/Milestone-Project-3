@@ -6,6 +6,12 @@
         <h3 class="brand-text pink-text text-lighten-1 center-align">Add a Recipe to Kooky</h3>
 
         <div class="row card-panel">
+            <p class="main-text">Once you add a new recipe to Kooky you will be redirected to our homepage, where your
+                latest addition
+                will be visible at the bottom of the list. The new recipe is also listed in your profile page.</p>
+        </div>
+
+        <div class="row card-panel">
             <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
                 <div class="row">
                     <div class="input-field col s12">
@@ -47,7 +53,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-list-ol prefix pink-text text-lighten-1"></i>
                         <textarea id="method" name="method" type="text" class="materialize-textarea validate"
-                            minlength="5" maxlength="300" required></textarea>
+                            minlength="5" maxlength="500" required></textarea>
                         <label for="method" class="brand-text-2 teal-text text-lighten-1">Method</label>
                         <span class="helper-text">
                             (One numbered step per line)</span>
@@ -59,11 +65,11 @@
                         <select id="category" name="category" class="validate" required>
                             <option value="Choose" disabled selected>Choose</option>
                             {% for category_name in recipe %}
-                                {% if category_name.category == recipe.category%}
+                            {% if category_name.category == recipe.category%}
                             <option value="{{ category_name.category }}" selected>{{ category_name.category }}</option>
-                                {% else %}
+                            {% else %}
                             <option value="{{ category_name.category }}">{{ category_name.category }}</option>
-                                {% endif %}
+                            {% endif %}
                             {% endfor %}
                             <option value="Fruit">Fruit</option>
                             <option value="Veggies">Veggies</option>
@@ -75,7 +81,7 @@
                             (Select from the drop-down menu)</span>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-image prefix pink-text text-lighten-1"></i>
@@ -98,7 +104,7 @@
                         <label for="date_submitted" class="brand-text-2 teal-text text-lighten-1">Date submitted</label>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="row center-align">
                         <button type="submit" class="s12 btn-large purple darken-3">Add Recipe</button>

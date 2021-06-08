@@ -48,6 +48,7 @@ nav ul a {
 
 .card-panel {
     margin-top: 2rem;
+    border: 1px solid black;
 }
 
 .main-text {
@@ -77,13 +78,13 @@ nav ul a {
     font-size: 80%;
 }
 
-.collapsible-header {
-    font-family: 'Pattaya', sans-serif;
-    font-size: 2rem;
+.collapsible {
+    border: 0.5px solid black;
 }
 
-.collapsible-body {
-    color: darkolivegreen;
+.collapsible-header {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 2rem; 
 }
 
 .subhead1 {
@@ -132,6 +133,9 @@ h5 {
 
 .edit-btn {
     font-family: 'Montserrat', sans-serif;
+    border-radius: 7%;
+    box-shadow: none;
+    border: 1px solid black;
 }
 
 .btn-floating {
