@@ -34,10 +34,23 @@
                         class="btn-small white black-text edit-btn">Edit</a>
                     {% endif %}
                     {% if session.user|lower == recipe.submitted_by|lower %}
-                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small modal-trigger white black-text edit-btn">Delete</a>
+                <a data-target="{{ recipe._id}}" class="btn-small modal-trigger white black-text edit-btn">Delete</a>
                 {% endif %}
                 </div>
             </div>
+
+            <div id="{{ recipe._id }}" class="modal">
+                <div class="modal-content">
+                    <h4>Confirm Delete</h4>
+                    <p>Are you sure you want to permanently delete this recipe from Kooky?</p>
+                </div>
+            <div class="modal-footer">
+                {% if session.user|lower == recipe.submitted_by|lower %}
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="modal-close white red-text btn-small edit-btn">Delete</a>
+                {% endif %}
+                <a class="modal-close white black-text btn-small edit-btn">Cancel</a>
+            </div>
+        </div>
             <div class="collapsible-body white">
                 <h5 class="teal-text text-lighten-1">Ingredients</h5>
                 <p class="wrap">{{ recipe.ingredients }}</p>
