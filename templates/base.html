@@ -22,7 +22,7 @@
 
     <header>
         <!-- navbar -->
-        <nav class="nav-extended red lighten-3">
+        <nav class="nav-extended pink lighten-2">
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_recipe') }}" class="brand-logo text-shadow left">Kooky <i
                         class="fas fa-cookie-bite fa-xs brand-icon"></i></a>
@@ -44,7 +44,7 @@
         <!-- mobile nav menu -->
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <h3 class="left-align red-text text-lighten-2 brand-text"><i
+                <h3 class="left-align pink-text text-lighten-1 brand-text"><i
                         class="fas fa-cookie-bite fa-xs brand-icon"></i> Kooky</h3>
             </li>
             <li><a href="{{ url_for('get_recipe') }}">Home</a></li>
@@ -84,20 +84,32 @@
     {% block scripts %}
     {% endblock %}
 
-    <footer>
-        <div class="fixed-action-btn">
-            <a class="btn-floating btn-large black">
+
+    <div class="fixed-action-btn hide-on-small-only">
+            <a class="btn-floating btn-large orange">
                 <i class="fas fa-arrow-left"></i>
             </a>
             <ul>
-                <li><a class="btn-floating black"></a></li>
-                <li><a class="btn-floating black"></a></li>
-                <li><a class="btn-floating black"></a></li>
-                <li><a class="btn-floating black"></a></li>
+                <li><a class="btn-floating blue"></a></li>
+                <li><a class="btn-floating purple"></a></li>
+                <li><a class="btn-floating red"></a></li>
+                <li><a class="btn-floating blue lighten-2"></a></li>
             </ul>
         </div>
-    </footer>
-
+        
+    <footer class="page-footer orange hide-on-med-and-up">
+          <div class="container">
+                
+                  <div class="row smedia">
+                      <h5 class="white-text brand-text-1">Follow Us</h5>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                  </div>
+              </div>
+    
+        </footer>
 </body>
 
 </html>

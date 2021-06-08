@@ -50,6 +50,10 @@ nav ul a {
     margin-top: 2rem;
 }
 
+.main-text {
+    font-size: 1.2rem;
+}
+
 .btn-large {
     font-weight: bold;
     font-size: 14pt;
@@ -128,4 +132,19 @@ h5 {
 
 .edit-btn {
     font-family: 'Montserrat', sans-serif;
+}
+
+.btn-floating {
+    border-radius: 50%;
+}
+
+footer {
+    padding-top: 2rem;
+    min-height: 8rem;
+}
+
+.smedia {
+    justify-content: space-between;
+    display: flex;
+    font-size: 2rem;
 }
