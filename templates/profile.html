@@ -52,13 +52,13 @@
             </div>
         </div>
             <div class="collapsible-body white">
-                <h5 class="teal-text text-lighten-1">Ingredients</h5>
+                <h5 class="teal-text text-lighten-1"><i class="fas fa-carrot prefix pink-text text-lighten-1"></i> &nbsp;Ingredients</h5>
                 <p class="wrap">{{ recipe.ingredients }}</p>
-                <h5 class="teal-text text-lighten-1">Materials</h5>
+                <h5 class="teal-text text-lighten-1"><i class="fas fa-utensil-spoon prefix pink-text text-lighten-1"></i> &nbsp;Materials</h5>
                 <p class="wrap">{{ recipe.material_items }}</p>
-                <h5 class="teal-text text-lighten-1">Method</h5>
+                <h5 class="teal-text text-lighten-1"><i class="fas fa-list-ol prefix pink-text text-lighten-1"></i> &nbsp;Method</h5>
                 <p class="wrap">{{ recipe.method }}</p>
-                <span class="subhead1 teal-text text-lighten-1">Category:</span><span> {{ recipe.category }}</span>
+                <span class="subhead1 teal-text text-lighten-1"><i class="fas fa-th-large prefix pink-text text-lighten-1"></i> &nbsp;Category:</span><span> {{ recipe.category }}</span>
                 <div class="imgstyle">
                     <img class="responsive-img limit-height" src="{{ recipe.image_link }}" target="_blank">
                     <p class="sub-details">(Submitted by {{ recipe.submitted_by }} on {{ recipe.date_submitted }})</p>
