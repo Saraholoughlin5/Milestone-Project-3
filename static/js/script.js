@@ -5,7 +5,7 @@ $(document).ready(function () {
         edge: "right"
     });
     $('.fixed-action-btn').floatingActionButton({
-        direction: "left",
+        direction: "top",
         hoverEnabled: false
     });
     $('.modal').modal();

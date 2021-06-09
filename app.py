@@ -30,7 +30,7 @@ def search():
     query = request.form.get("query")
     recipe = list(mongo.db.recipe.find({"$text": {"$search": query}}))
     return render_template("recipe.html", recipe=recipe)
-    
+
 
 @app.route("/join", methods=["GET", "POST"])
 def join():
@@ -122,7 +122,7 @@ def add_recipe():
         mongo.db.recipe.insert_one(recipe)
         flash("Recipe successfully added!")
         return redirect(url_for("get_recipe"))
-        
+      
     return render_template("add_recipe.html")
 
 
