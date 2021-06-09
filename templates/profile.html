@@ -18,13 +18,13 @@
         {% for recipe in recipe %}
         {% if username|lower == recipe.submitted_by %}
 	        <li>
-            <div class="collapsible-header pink-text text-lighten-1">
+            <div class="collapsible-header teal-text text-lighten-1">
                 <div class="col s1">
                     <i class="fas fa-caret-down"></i>
                 </div>
                 <div class="col s5 m6 l6 xl8">{{ recipe.recipe_title }}
                     {% if recipe.has_allergens == "on" %}
-                    <i class="fas fa-exclamation teal-text text-lighten-1 tooltipped" data-position="top"
+                    <i class="fas fa-bell pink-text text-lighten-1 tooltipped" data-position="top"
                         data-tooltip="Contains allergens"></i>
                     {% endif %}
                 </div>

@@ -87,16 +87,18 @@ nav ul a {
     font-size: 2rem; 
 }
 
+.alert {
+    font-size: .5rem;
+}
+
 .subhead1 {
     font-family: 'Pattaya', sans-serif;
     font-size: 1.5rem;
-    color: darkolivegreen; 
 }
 
 .subhead2 {
     font-family: 'Pattaya', sans-serif;
     font-size: 1.3rem;
-    color: darkolivegreen;
 }
 
 .imgstyle {
@@ -113,6 +115,8 @@ h5 {
 
 .wrap {
     white-space: pre-line;
+    margin-left: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .switch {
