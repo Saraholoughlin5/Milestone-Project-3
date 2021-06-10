@@ -144,7 +144,7 @@ def edit_recipe(recipe_id):
             "category": request.form.get("category"),
             "has_allergens": has_allergens,
             "image_link": request.form.get("image_link"),
-            "submitted_by": session["user"],
+            "submitted_by": request.form.get("submitted_by"),
             "date_submitted": request.form.get("date_submitted")
         }
         mongo.db.recipe.update({"_id": ObjectId(recipe_id)}, submit)

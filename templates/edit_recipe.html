@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% if session.user == recipe.submitted_by %}
+{% if session.user == recipe.submitted_by or session.user == "admin" %}
 <div class="row">
     <!-- Main Recipe Card Panel -->
     <div class="card-panel">
@@ -94,10 +94,10 @@
                     <div class="input-field col s12">
                         <i class="fas fa-image prefix pink-text text-lighten-1"></i>
                         <input id="image_link" name="image_link" type="text" 
-                        value="{{ recipe.image_link }}" alt="{{ recipe.recipe_title }}" class="validate" required>
+                        value="{{ recipe.image_link }}" alt="recipe image" class="validate" required>
                         <label for="image_link" class="brand-text-2 teal-text text-lighten-1">Image link</label>
                         <span class="helper-text">
-                            (Add a link to your creation here, e.g. Instagram post)</span>
+                            (Add a link to an online image of your recipe)</span>
                     </div>
                 </div>
                 <!-- Submitted By -->
