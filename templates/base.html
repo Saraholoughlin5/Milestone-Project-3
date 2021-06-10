@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Stylesheet -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pattaya&display=swap" rel="stylesheet"
         type="text/css">
+    <!-- Font Awesome Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" type="text/css">
+    <!-- Materialize Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
+    <!-- Local Stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
@@ -19,53 +23,46 @@
 </head>
 
 <body>
-
     <header>
-        <!-- navbar -->
+        <!-- Navbar -->
         <nav class="nav-extended pink lighten-2">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_recipe') }}" class="brand-logo text-shadow left">Kooky <i
+                <a href="{{ url_for('get_recipe') }}" class="brand-logo text-shadow left">Kooky Kids<i
                         class="fas fa-cookie-bite fa-xs brand-icon"></i></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_recipe') }}">Home</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                        <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                    <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
-                        <li><a href="{{ url_for('login') }}">Log In</a></li>
-                        <li><a href="{{ url_for('join') }}">Join</a></li>
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
+                    <li><a href="{{ url_for('join') }}">Join</a></li>
                     {% endif %}
-                    
-                    
                 </ul>
             </div>
         </nav>
-
-        <!-- mobile nav menu -->
+        <!-- Mobile Nav Menu -->
         <ul class="sidenav" id="mobile-demo">
             <li>
                 <h3 class="left-align pink-text text-lighten-1 brand-text"><i
-                        class="fas fa-cookie-bite fa-xs brand-icon"></i> Kooky</h3>
+                        class="fas fa-cookie-bite fa-xs brand-icon"></i> Kooky Kids</h3>
             </li>
             <li><a href="{{ url_for('get_recipe') }}">Home</a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+            <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="{{ url_for('join') }}">Join</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('join') }}">Join</a></li>
             {% endif %}
         </ul>
-    
     </header>
 
-    <main>
-
     <section>
-        <!-- flash messages for 'join' page -->
+        <!-- Flash Messages -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
@@ -82,59 +79,70 @@
         {% endblock %}
     </main>
 
+    <!-- JQuery Script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Materialize Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Local Script -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
 
-
-     
+    <!-- Floating Button with Social Media Buttons (click to view). Large Screen Only -->
     <div class="fixed-action-btn">
-            <a class="btn-floating btn-large orange hide-on-small-only">
-                <i class="fas fa-cookie-bite"></i>
-            </a>
-            <ul>
-                <li><a class="btn-floating blue hide-on-small-only" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook white-text"></i></a></li>
-                <li><a class="btn-floating purple hide-on-small-only" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram white-text"></i></a></li>
-                <li><a class="btn-floating red hide-on-small-only" href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube white-text"></i></a></li>
-                <li><a class="btn-floating blue lighten-2 hide-on-small-only" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter white-text"></i></a></li>
-            </ul>
-        </div> 
-        </main>
-        <footer class="page-footer pink lighten-2 hide-on-med-and-up">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s8">
-                <h5 class="white-text">Follow Us</h5>
-                <p class="white-text text-lighten-4 smedia"><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook white-text"></i></a>
-                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram white-text"></i></a>
-                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube white-text"></i></a>
-                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter white-text"></i></a></p>
-              </div>
-              <div class="col l4 offset-l2 s4">
-                <h5 class="white-text">Links</h5>
-                <ul>
-            <li><a href="{{ url_for('get_recipe') }}" class="white-text">Home</a></li>
-            {% if session.user %}
-                <li><a href="{{ url_for('profile', username=session['user']) }}" class="white-text">Profile</a></li>
-                <li><a href="{{ url_for('add_recipe') }}" class="white-text">Add Recipe</a></li>
-                <li><a href="{{ url_for('logout') }}" class="white-text">Log Out</a></li>
-            {% else %}
-                <li><a href="{{ url_for('login') }}" class="white-text">Log In</a></li>
-                <li><a href="{{ url_for('join') }}" class="white-text">Join</a></li>
-            {% endif %}
+        <a class="btn-floating btn-large orange text-shadow hide-on-small-only">
+            <i class="fas fa-cookie-bite"></i>
+        </a>
+        <ul>
+            <li><a class="btn-floating blue hide-on-small-only" href="https://www.facebook.com" target="_blank"><i
+                        class="fab fa-facebook white-text"></i></a></li>
+            <li><a class="btn-floating purple hide-on-small-only" href="https://www.instagram.com" target="_blank"><i
+                        class="fab fa-instagram white-text"></i></a></li>
+            <li><a class="btn-floating red hide-on-small-only" href="https://www.youtube.com" target="_blank"><i
+                        class="fab fa-youtube white-text"></i></a></li>
+            <li><a class="btn-floating blue lighten-2 hide-on-small-only" href="https://www.twitter.com"
+                    target="_blank"><i class="fab fa-twitter white-text"></i></a></li>
         </ul>
-              </div>
+    </div>
+    <!-- Footer (Social Media and Menu Links, Small and Medium Screens Only) -->
+    <footer class="page-footer pink lighten-2 hide-on-med-and-up">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s8">
+                    <h5 class="white-text">Follow Us</h5>
+                    <p class="white-text text-lighten-4 smedia"><a href="https://www.facebook.com" target="_blank"><i
+                                class="fab fa-facebook white-text"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i
+                                class="fab fa-instagram white-text"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube white-text"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter white-text"></i></a>
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s4">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a href="{{ url_for('get_recipe') }}" class="white-text">Home</a></li>
+                        {% if session.user %}
+                        <li><a href="{{ url_for('profile', username=session['user']) }}" class="white-text">Profile</a>
+                        </li>
+                        <li><a href="{{ url_for('add_recipe') }}" class="white-text">Add Recipe</a></li>
+                        <li><a href="{{ url_for('logout') }}" class="white-text">Log Out</a></li>
+                        {% else %}
+                        <li><a href="{{ url_for('login') }}" class="white-text">Log In</a></li>
+                        <li><a href="{{ url_for('join') }}" class="white-text">Join</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="footer-copyright center-align">
+        </div>
+        <!-- Footer Copyright -->
+        <div class="footer-copyright center-align">
             <div class="container">
-            © 2014 Copyright Text
+                Copyright © 2014 Kooky Kids
             </div>
-          </div>
-        </footer>
-    </body>
+        </div>
+    </footer>
+</body>
 
 </html>

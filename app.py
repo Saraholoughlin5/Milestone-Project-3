@@ -21,6 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_recipe")
 def get_recipe():
+    # Lists all recipes on the homepage
     recipe = list(mongo.db.recipe.find())
     return render_template("recipe.html", recipe=recipe)
 
@@ -28,6 +29,7 @@ def get_recipe():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
+    # Returns a list of recipes containing the search data
     recipe = list(mongo.db.recipe.find({"$text": {"$search": query}}))
     return render_template("recipe.html", recipe=recipe)
 
@@ -39,6 +41,7 @@ def join():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
+            # Duplication of username not permitted
             flash("WARNING: Username Not Available")
             return redirect(url_for("join"))
 
@@ -49,6 +52,7 @@ def join():
         mongo.db.users.insert_one(join)
 
         session["user"] = request.form.get("username").lower()
+        # New user's profile page displayed
         flash("Thank you for joining Kooky!")
         return redirect(url_for("profile", username=session["user"]))
     return render_template("join.html")
@@ -57,13 +61,13 @@ def join():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        # check that username exists in database
+        # Confirm username exists in database
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
             if check_password_hash(
-                # check that hashed password matches users input
+                # Confirm hashed password matches users input
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     flash("Welcome, {}!".format(
@@ -71,12 +75,12 @@ def login():
                     return redirect(url_for("profile", username=session["user"]))
 
             else:
-                # invalid user password
+                # Incorrect user password 
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
         else:
-            # invalid username or username does not exist
+            # Incorrect username or username does not exist 
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
@@ -85,12 +89,13 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # grab session user's username from database
+    # Grab session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     recipe = mongo.db.recipe.find()
 
     if session["user"]:
+        # User's profile page is displayed
         return render_template("profile.html", username=username, recipe=recipe)
 
     return redirect(url_for("login"))
@@ -98,7 +103,7 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    # remove session cookie from user's browser
+    # Remove session cookie from user's browser 
     flash("You are now logged out of your Kooky profile")
     session.pop("user")
     return redirect(url_for("login"))
@@ -120,6 +125,7 @@ def add_recipe():
             "date_submitted": request.form.get("date_submitted")
         }
         mongo.db.recipe.insert_one(recipe)
+        # Recipe added to list on homepage
         flash("Recipe successfully added!")
         return redirect(url_for("get_recipe"))
       
@@ -142,6 +148,7 @@ def edit_recipe(recipe_id):
             "date_submitted": request.form.get("date_submitted")
         }
         mongo.db.recipe.update({"_id": ObjectId(recipe_id)}, submit)
+        # Recipe edited and displayed on homepage
         flash("Recipe Successfully Updated")
 
     recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
@@ -151,6 +158,7 @@ def edit_recipe(recipe_id):
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipe.remove({"_id": ObjectId(recipe_id)})
+    # Delete permanently from profile and homepage
     flash("Recipe Successfully Deleted!")
     return redirect(url_for("profile", username=session["user"]))
 

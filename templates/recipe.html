@@ -1,30 +1,40 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- Main Card Panel -->
 <div class="row card-panel recipespg">
 
+    <!-- Introduction Card Panel -->
     <div class="row card-panel">
-        <h2 class="center-align brand-text pink-text text-lighten-1">Welcome to Kooky Recipes!</h2>
-            <p class="main-text">Here you will find a variety of no-cook recipes that will encourage you and your children to prepare food in a fun, safe way.</p>
+        <h2 class="center-align brand-text pink-text text-lighten-1">Welcome to Kooky Kids Recipes!</h2>
+        <p class="main-text">Kooky Kids was set up by a group of busy parents who collaborated to gather a variety of
+            no-cook recipes for fun and healthy snacks that will encourage you and your children
+            to prepare food in a fun, safe way. You can see our current recipes below. Please also feel free to use the
+            search bar to find recipes that contain your favourite ingredients!</p>
+        <p class="main-text">Join Kooky Kids and you will be able to add you and your children's favourite recipes.</p>
+        <p class="main-text">Happy no-cooking!</p>
+
+        <!-- Search Bar -->
         <form action="{{ url_for('search') }}" method="post" class="col m12 l12">
-            
-                <div class="row input-field col s12 m12">
-                    <i class="fas fa-search prefix pink-text"></i>
-                    <input type="text" name="query" id="query" minlength="2" class="validate" required>
-                    <label for="query">Search Recipes</label>
-                </div>
-                <div class="col s12 m12 center-align">
-                    <span><a href="{{ url_for('get_recipe') }}" class="btn-small edit-btn white red-text">Clear</a></span>
-                    <span><button type="submit" class="btn-small edit-btn white black-text">
+            <div class="row input-field col s12 m12">
+                <i class="fas fa-search prefix pink-text"></i>
+                <input type="text" name="query" id="query" minlength="2" class="validate" required>
+                <label for="query">Search Recipes</label>
+            </div>
+            <div class="col s12 m12 center-align">
+                <span><a href="{{ url_for('get_recipe') }}" class="btn-small edit-btn white red-text">Clear</a></span>
+                <span><button type="submit" class="btn-small edit-btn white black-text tooltipped" data-position="bottom" 
+                    data-tooltip="Scroll down after search to view results">
                         Search
                     </button></span>
-                </div>
-            
+            </div>
         </form>
     </div>
 
-    <h3 class="brand-text pink-text text-lighten-1 center-align">Kooky Recipes</h3>
+    <!-- Recipes Heading -->
+    <h3 class="brand-text pink-text text-lighten-1 center-align">Kooky Kids Recipes</h3>
 
+    <!-- Collapsible (List of Recipes and Recipe Details) -->
     {% if recipe|length > 0 %}
     <ul class="collapsible">
         {% for recipe in recipe %}
@@ -47,24 +57,29 @@
                 </div>
             </div>
             <div class="collapsible-body white">
-                <h5 class="teal-text text-lighten-1"><i class="fas fa-carrot prefix pink-text text-lighten-1"></i> &nbsp;Ingredients</h5>
+                <h5 class="teal-text text-lighten-1"><i class="fas fa-carrot prefix pink-text text-lighten-1"></i>
+                    &nbsp;Ingredients</h5>
                 <p class="wrap">{{ recipe.ingredients }}</p>
-                <h5 class="teal-text text-lighten-1"><i class="fas fa-utensil-spoon prefix pink-text text-lighten-1"></i> &nbsp;Materials</h5>
+                <h5 class="teal-text text-lighten-1"><i
+                        class="fas fa-utensil-spoon prefix pink-text text-lighten-1"></i> &nbsp;Materials</h5>
                 <p class="wrap">{{ recipe.material_items }}</p>
-                <h5 class="teal-text text-lighten-1"><i class="fas fa-list-ol prefix pink-text text-lighten-1"></i> &nbsp;Method</h5>
+                <h5 class="teal-text text-lighten-1"><i class="fas fa-list-ol prefix pink-text text-lighten-1"></i>
+                    &nbsp;Method</h5>
                 <p class="wrap">{{ recipe.method }}</p>
-                <span class="subhead1 teal-text text-lighten-1"><i class="fas fa-th-large prefix pink-text text-lighten-1"></i> &nbsp;Category:</span><span> {{ recipe.category }}</span>
+                <span class="subhead1 teal-text text-lighten-1"><i
+                        class="fas fa-th-large prefix pink-text text-lighten-1"></i> &nbsp;Category:</span><span>
+                    {{ recipe.category }}</span>
                 <div class="imgstyle">
                     <img class="responsive-img limit-height" src="{{ recipe.image_link }}" target="_blank">
                     <p class="sub-details">(Submitted by {{ recipe.submitted_by }} on {{ recipe.date_submitted }})</p>
                 </div>
-                
             </div>
         </li>
         {% endfor %}
     </ul>
     {% else %}
-        <h3 class="center-align">The item you are searching for is not listed in any of these recipes</h3>
+    <!-- Search Error Message (When Item Not Present) -->
+    <h3 class="center-align">The item you are searching for is not listed in any of these recipes</h3>
     {% endif %}
 </div>
 {% endblock %}

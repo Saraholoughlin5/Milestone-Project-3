@@ -1,4 +1,4 @@
-/* Jquery initialization - Materialize */
+/* Jquery Initialization - Materialize Features */
 
 $(document).ready(function () {
     $('.sidenav').sidenav({
@@ -23,3 +23,4 @@ $(document).ready(function () {
     });
      $('.modal').modal();
 });
+
