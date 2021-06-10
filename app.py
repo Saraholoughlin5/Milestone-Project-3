@@ -1,3 +1,4 @@
+# Imports
 import os
 from flask import (
     Flask, flash, render_template,
@@ -9,6 +10,7 @@ if os.path.exists("env.py"):
     import env
 
 
+# App Configuration
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -163,6 +165,7 @@ def delete_recipe(recipe_id):
     return redirect(url_for("profile", username=session["user"]))
 
 
+# Run application information
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

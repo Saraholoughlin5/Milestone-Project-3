@@ -1,3 +1,4 @@
+/* Body */
 body {
     font-family: 'Montserrat', sans-serif;
     background-image: url(/static/img/background.jpg);
@@ -7,54 +8,66 @@ body {
     background-size: cover;
 }
 
+/* Navbar */
 nav {
     font-weight: bold;
 }
 
+/* Navbar Logo Text */
 nav .brand-logo {
     font-size: 2.5rem;
 }
 
+/* Navbar Menu List */
 nav ul a {
     font-size: 1.2rem;
 }
 
+/* Shadow on Navbar Logo Text */
 .text-shadow {
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
 }
 
+/* Main Brand Font */
 .brand-text {
     font-family: 'Pattaya', sans-serif;
 }
 
+/* Resized Brand Font for Recipe Titles*/
 .brand-text-2 {
     font-family: 'Pattaya', sans-serif;
     font-size: 1.5rem !important;
 }
 
+/* Smaller Recipe Details Brand Font */
 .brand-text-3 {
     font-family: 'Pattaya', sans-serif;
     font-size: 1.2rem !important;
 }
 
+/* Font Type for Logo Text */
 .brand-logo {
     font-family: 'Pattaya', sans-serif;
 }
 
+/* Placement of Brand Cookie Icon */
 .brand-icon {
     line-height: 2.4;
     padding-left: 0.75rem;
 }
 
+/* Card Panel Border and Top Margin */
 .card-panel {
     margin-top: 2rem;
     border: 1px solid black;
 }
 
+/* General Text */
 .main-text {
     font-size: 1.2rem;
 }
 
+/* Login and Join Buttons */
 .btn-large {
     font-weight: bold;
     font-size: 14pt;
@@ -62,6 +75,7 @@ nav ul a {
     border-radius: 12px;
 }
 
+/* Flash Messags Styling */
 .flashes h4 {
     color: white;
     font-size: 16pt;
@@ -69,65 +83,63 @@ nav ul a {
     line-height: 3;
 }
 
+/* Recipe Panel where Collapsible is Displayed */
 .recipespg {
     min-height: 75rem;
 }
 
+/* Submission Details Beneath Recipe Images */
 .sub-details {
     text-align: center;
     font-size: 80%;
 }
 
+/* Collapsible */
 .collapsible {
     border: 0.5px solid black;
 }
 
+/* Collapsible Header */
 .collapsible-header {
     font-family: 'Pattaya', sans-serif;
-    font-size: 2rem; 
+    font-size: 2rem;
 }
 
-.alert {
-    font-size: .5rem;
-}
-
+/* Smaller Recipe Item Heading */
 .subhead1 {
     font-family: 'Pattaya', sans-serif;
     font-size: 1.5rem;
 }
 
-.subhead2 {
-    font-family: 'Pattaya', sans-serif;
-    font-size: 1.3rem;
-}
-
+/* Space Above Recipe Image */
 .imgstyle {
     margin-top: 3rem;
 }
 
-table tr {
-    border: none;
-}
-
+/* Recipe Item Headings */
 h5 {
     font-family: 'Pattaya', sans-serif;
 }
 
+/* Capitalise First Letter of DB Username */
 .name-format {
     text-transform: capitalize;
 }
 
+/* Input List Items One Line Per */
 .wrap {
     white-space: pre-line;
     margin-left: 2.5rem;
     margin-bottom: 2rem;
 }
 
+/* Allergen Switch in Recipe Forms */
 .switch {
     margin-left: 2rem !important;
     margin-bottom: 2rem;
 }
 
+/* Max Height For Recipe Image Display */
 .limit-height {
     max-height: 25rem;
     display: block;
@@ -135,10 +147,12 @@ h5 {
     margin-right: auto;
 }
 
+/* Hide Submitted By Input - Pulled From DB */
 .hide {
     display: none;
 }
 
+/* Small Button Formatting */
 .edit-btn {
     font-family: 'Montserrat', sans-serif;
     border-radius: 7%;
@@ -146,10 +160,12 @@ h5 {
     border: .1rem solid black;
 }
 
+/* Action Button on Large Screens */
 .btn-floating {
     border-radius: 50%;
 }
 
+/* Social Media Icons in Footer */
 .smedia {
     justify-content: space-between;
     display: flex;
@@ -157,6 +173,7 @@ h5 {
     margin-right: 3rem;
 }
 
+/* Access Denied Message */
 .warning {
     margin-bottom: 3rem;
 }

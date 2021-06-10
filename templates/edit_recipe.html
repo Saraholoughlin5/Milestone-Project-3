@@ -6,16 +6,14 @@
     <!-- Main Recipe Card Panel -->
     <div class="card-panel">
         <h3 class="brand-text pink-text text-lighten-1 center-align">Edit Recipe</h3>
-
         <!-- Edit Recipe Card Panel -->
         <div class="row card-panel">
             <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
-                
                 <!-- Recipe Title -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-book prefix pink-text text-lighten-1"></i>
-                        <input id="recipe_title" name="recipe_title" type="text" minlength="4" maxlength="30" 
+                        <input id="recipe_title" name="recipe_title" type="text" minlength="4" maxlength="30"
                             value="{{ recipe.recipe_title }}" class="validate" required>
                         <label for="recipe_title" class="brand-text-2 teal-text text-lighten-1">Recipe Title</label>
                         <span class="helper-text">
@@ -40,9 +38,9 @@
                     <label for="has_allergens" class="brand-text-3 pink-text text-lighten-1">
                         Allergens?
                         {% if recipe.has_allergens == "on" %}
-                            <input type="checkbox" id="has_allergens" name="has_allergens" checked>
+                        <input type="checkbox" id="has_allergens" name="has_allergens" checked>
                         {% else %}
-                            <input type="checkbox" id="has_allergens" name="has_allergens">
+                        <input type="checkbox" id="has_allergens" name="has_allergens">
                         {% endif %}
                         <span class="lever"></span>
                     </label>
@@ -93,8 +91,8 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-image prefix pink-text text-lighten-1"></i>
-                        <input id="image_link" name="image_link" type="text" 
-                        value="{{ recipe.image_link }}" alt="recipe image" class="validate" required>
+                        <input id="image_link" name="image_link" type="text" value="{{ recipe.image_link }}"
+                            alt="recipe image" class="validate" required>
                         <label for="image_link" class="brand-text-2 teal-text text-lighten-1">Image link</label>
                         <span class="helper-text">
                             (Add a link to an online image of your recipe)</span>
@@ -104,22 +102,24 @@
                 <div class="row">
                     <div class="input-field col s12 m6 hide">
                         <i class="fas fa-user-circle prefix pink-text text-lighten-1"></i>
-                        <input id="submitted_by" name="submitted_by" type="text" value="{{ recipe.submitted_by }}" class="validate">
+                        <input id="submitted_by" name="submitted_by" type="text" value="{{ recipe.submitted_by }}"
+                            class="validate">
                         <label for="submitted_by" class="brand-text-2 teal-text text-lighten-1">Submitted by</label>
                     </div>
                     <!-- Date Submitted -->
                     <div class="input-field col s12">
                         <i class="fas fa-calendar-alt prefix pink-text text-lighten-1"></i>
-                        <input id="date_submitted" name="date_submitted" type="text" value="{{ recipe.date_submitted }}" class="datepicker validate"
-                            required>
+                        <input id="date_submitted" name="date_submitted" type="text" value="{{ recipe.date_submitted }}"
+                            class="datepicker validate" required>
                         <label for="date_submitted" class="brand-text-2 teal-text text-lighten-1">Date submitted</label>
                     </div>
                 </div>
-                <!-- Buttons -->
+                <!-- Save and Cancel Buttons -->
                 <div class="row">
                     <div class="row center-align">
                         <button type="submit" class="s12 btn-small white black-text">Save Updates</button>
-                        <a href="{{ url_for('get_recipe') }}" class="btn-small white black-text"> Cancel <i class="fas fa-window-close right red-text"></i></a>
+                        <a href="{{ url_for('get_recipe') }}" class="btn-small white black-text"> Cancel <i
+                                class="fas fa-window-close right red-text"></i></a>
                     </div>
                 </div>
             </form>
@@ -127,23 +127,26 @@
     </div>
 </div>
 {% else %}
+<!-- Access Denied Message -->
 <div class="row">
-        <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('login') }}">
-            <div class="card-panel">
-                <h3 class="center-align brand-text pink-text text-lighten-1 warning">Oops! Looks like you tried to add or edit a recipe without permission</h3>
-                <h4 class="center-align brand-text teal-text text-lighten-1 warning">If you wish to add or edit your own recipes please Log In or Join Kooky!</h4>
-                
-                <div class="row center-align">
-                    <p class="center-align">Want to join Kooky? <a href="{{ url_for('join') }}" 
+    <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('login') }}">
+        <div class="card-panel">
+            <h3 class="center-align brand-text pink-text text-lighten-1 warning">Oops! Looks like you tried to add or
+                edit a recipe without permission</h3>
+            <h4 class="center-align brand-text teal-text text-lighten-1 warning">If you wish to add or edit your own
+                recipes please Log In or Join Kooky!</h4>
+
+            <div class="row center-align">
+                <p class="center-align">Want to join Kooky? <a href="{{ url_for('join') }}"
                         class="pink-text text-lighten-1">Sign Up</a></p>
-                </div>
-                <div class="row center-align">
-                    <p class="center-align">Already Signed Up? <a href="{{ url_for('login') }}" 
-                        class="pink-text text-lighten-1">Log In</a></p>
-                </div>
             </div>
-        </form>
-    </div>
+            <div class="row center-align">
+                <p class="center-align">Already Signed Up? <a href="{{ url_for('login') }}"
+                        class="pink-text text-lighten-1">Log In</a></p>
+            </div>
+        </div>
+    </form>
+</div>
 {% endif %}
 
 {% endblock %}

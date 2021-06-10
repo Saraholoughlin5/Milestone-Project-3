@@ -3,7 +3,6 @@
 
 <!-- Main Card Panel -->
 <div class="row card-panel recipespg">
-
     <!-- Introduction Card Panel -->
     <div class="row card-panel">
         <h2 class="center-align brand-text pink-text text-lighten-1">Welcome to Kooky Kids Recipes!</h2>
@@ -13,7 +12,6 @@
             search bar to find recipes that contain your favourite ingredients!</p>
         <p class="main-text">Join Kooky Kids and you will be able to add you and your children's favourite recipes.</p>
         <p class="main-text">Happy no-cooking!</p>
-
         <!-- Search Bar -->
         <form action="{{ url_for('search') }}" method="post" class="col m12 l12">
             <div class="row input-field col s12 m12">
@@ -21,34 +19,38 @@
                 <input type="text" name="query" id="query" minlength="2" class="validate" required>
                 <label for="query">Search Recipes</label>
             </div>
+            <!-- Clear/Search Buttons and Tooltips -->
             <div class="col s12 m12 center-align">
-                <span><a href="{{ url_for('get_recipe') }}" class="btn-small edit-btn white red-text">Clear</a></span>
-                <span><button type="submit" class="btn-small edit-btn white black-text tooltipped" data-position="bottom" 
-                    data-tooltip="Scroll down after search to view results">
+                <span><a href="{{ url_for('get_recipe') }}" class="btn-small edit-btn white red-text tooltipped"
+                        data-position="top" data-tooltip="Click here to reset">Clear</a></span>
+                <span><button type="submit" class="btn-small edit-btn white black-text tooltipped"
+                        data-position="bottom" data-tooltip="Scroll down to view results">
                         Search
                     </button></span>
             </div>
         </form>
     </div>
-
     <!-- Recipes Heading -->
     <h3 class="brand-text pink-text text-lighten-1 center-align">Kooky Kids Recipes</h3>
-
     <!-- Collapsible (List of Recipes and Recipe Details) -->
     {% if recipe|length > 0 %}
     <ul class="collapsible">
         {% for recipe in recipe %}
         <li>
+            <!-- Collapsible Header -->
             <div class="collapsible-header teal-text text-lighten-1">
                 <div class="col s1">
                     <i class="fas fa-caret-down"></i>
                 </div>
+                <!-- Allergen Warning -->
                 <div class="col s8 l10">{{ recipe.recipe_title }}
                     {% if recipe.has_allergens == "on" %}
+                    <!-- Tooltipped Allergen Warning Icon -->
                     <i class="fas fa-bell pink-text text-lighten-1 tooltipped" data-position="top"
                         data-tooltip="Contains allergens"></i>
                     {% endif %}
                 </div>
+                <!-- Edit Button -->
                 <div class="col s4 l2">
                     {% if session.user|lower == recipe.submitted_by|lower %}
                     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
@@ -56,19 +58,25 @@
                     {% endif %}
                 </div>
             </div>
+            <!-- Collapsible Body -->
             <div class="collapsible-body white">
+                <!-- Ingredients -->
                 <h5 class="teal-text text-lighten-1"><i class="fas fa-carrot prefix pink-text text-lighten-1"></i>
                     &nbsp;Ingredients</h5>
                 <p class="wrap">{{ recipe.ingredients }}</p>
+                <!-- Materials -->
                 <h5 class="teal-text text-lighten-1"><i
                         class="fas fa-utensil-spoon prefix pink-text text-lighten-1"></i> &nbsp;Materials</h5>
                 <p class="wrap">{{ recipe.material_items }}</p>
+                <!-- Method -->
                 <h5 class="teal-text text-lighten-1"><i class="fas fa-list-ol prefix pink-text text-lighten-1"></i>
                     &nbsp;Method</h5>
                 <p class="wrap">{{ recipe.method }}</p>
+                <!-- Category -->
                 <span class="subhead1 teal-text text-lighten-1"><i
                         class="fas fa-th-large prefix pink-text text-lighten-1"></i> &nbsp;Category:</span><span>
                     {{ recipe.category }}</span>
+                <!-- Image and Submission Details -->
                 <div class="imgstyle">
                     <img class="responsive-img limit-height" src="{{ recipe.image_link }}" alt="recipe image">
                     <p class="sub-details">(Submitted by {{ recipe.submitted_by }} on {{ recipe.date_submitted }})</p>

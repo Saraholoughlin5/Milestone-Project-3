@@ -1,34 +1,44 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- Main Card Panel -->
 <div class="card-panel row recipespg">
+    <!-- Heading -->
     <h3 class="center-align brand-text pink-text text-lighten-1 name-format">
         {{ username }}'s page
     </h3>
+    <!-- Profile Text Card Panel -->
     <div class="row card-panel">
         <p class="main-text">Welcome to your Kooky profile page. Here, you can view and delete any recipes you have
             submitted.</p>
-        <p class="main-text">To submit a recipe, please click on the 'Add Recipe' link in the menu - this will display the recipe
+        <p class="main-text">To submit a recipe, please click on the 'Add Recipe' link in the menu - this will display
+            the recipe
             submission form. To edit your submitted recipes, please click on the 'Edit' button, on this page, or on the
             homepage.</p>
-        <p class="main-text">You can only remove recipes via the 'Delete' button for your recipes on this page (NOTE: The 
-            site administrator can edit or delete content they deem unsuitable for Kooky Kids).</p>
+        <p class="main-text">You can only remove recipes via the 'Delete' button for your recipes on this page (NOTE:
+            The
+            site administrator can also edit or delete content they deem unsuitable for Kooky Kids).</p>
         <p class="main-text">Happy non-cooking!</p>
     </div>
+    <!-- Collapsible (Admin Privileges) -->
     <ul class="collapsible">
         {% if username|lower == "admin" %}
         {% for recipe in recipe %}
         <li>
+            <!-- Collapsible Header -->
             <div class="collapsible-header teal-text text-lighten-1">
                 <div class="col s1">
+                    <!-- Caret -->
                     <i class="fas fa-caret-down"></i>
                 </div>
+                <!-- Allergens Icon -->
                 <div class="col s5 m6 l6 xl8">{{ recipe.recipe_title }}
                     {% if recipe.has_allergens == "on" %}
                     <i class="fas fa-bell pink-text text-lighten-1 tooltipped" data-position="top"
                         data-tooltip="Contains allergens"></i>
                     {% endif %}
                 </div>
+                <!-- Edit and Delete Recipe Buttons -->
                 <div class="col s7 m6 l6 xl4">
                     {% if session.user|lower == "admin" %}
                     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
@@ -40,6 +50,7 @@
                     {% endif %}
                 </div>
             </div>
+            <!-- Delete Recipe Confirmatin Modal -->
             <div id="{{ recipe._id }}" class="modal">
                 <div class="modal-content">
                     <h4 class=" brand-text pink-text lighten-1">Confirm Delete</h4>
@@ -53,19 +64,25 @@
                     <a class="modal-close white black-text btn-small edit-btn">Cancel</a>
                 </div>
             </div>
+            <!-- Collapsible Body -->
             <div class="collapsible-body white">
+                <!-- Ingredients -->
                 <h5 class="teal-text text-lighten-1"><i class="fas fa-carrot prefix pink-text text-lighten-1"></i>
                     &nbsp;Ingredients</h5>
                 <p class="wrap">{{ recipe.ingredients }}</p>
+                <!-- Materials -->
                 <h5 class="teal-text text-lighten-1"><i
                         class="fas fa-utensil-spoon prefix pink-text text-lighten-1"></i> &nbsp;Materials</h5>
                 <p class="wrap">{{ recipe.material_items }}</p>
+                <!-- Method -->
                 <h5 class="teal-text text-lighten-1"><i class="fas fa-list-ol prefix pink-text text-lighten-1"></i>
                     &nbsp;Method</h5>
                 <p class="wrap">{{ recipe.method }}</p>
+                <!-- Category -->
                 <span class="subhead1 teal-text text-lighten-1"><i
                         class="fas fa-th-large prefix pink-text text-lighten-1"></i> &nbsp;Category:</span><span>
                     {{ recipe.category }}</span>
+                <!-- Image Link and Submission Details -->
                 <div class="imgstyle">
                     <img class="responsive-img limit-height" src="{{ recipe.image_link }}" alt="recipe title">
                     <p class="sub-details">(Submitted by {{ recipe.submitted_by }} on {{ recipe.date_submitted }})</p>
@@ -74,19 +91,24 @@
         </li>
         {% endfor %}
         {% endif %}
+        <!-- Collapsible (Session User Privileges) -->
         {% for recipe in recipe %}
         {% if username|lower == recipe.submitted_by %}
         <li>
+            <!-- Collapsible Header -->
             <div class="collapsible-header teal-text text-lighten-1">
                 <div class="col s1">
+                    <!-- Caret -->
                     <i class="fas fa-caret-down"></i>
                 </div>
+                <!-- Allergens Icon -->
                 <div class="col s5 m6 l6 xl8">{{ recipe.recipe_title }}
                     {% if recipe.has_allergens == "on" %}
                     <i class="fas fa-bell pink-text text-lighten-1 tooltipped" data-position="top"
                         data-tooltip="Contains allergens"></i>
                     {% endif %}
                 </div>
+                <!-- Edit and Delete Recipe Buttons -->
                 <div class="col s7 m6 l6 xl4">
                     {% if session.user|lower == recipe.submitted_by|lower %}
                     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
@@ -98,7 +120,7 @@
                     {% endif %}
                 </div>
             </div>
-
+            <!-- Delete Recipe Confirmatin Modal -->
             <div id="{{ recipe._id }}" class="modal">
                 <div class="modal-content">
                     <h4 class=" brand-text pink-text lighten-1">Confirm Delete</h4>
@@ -112,24 +134,29 @@
                     <a class="modal-close white black-text btn-small edit-btn">Cancel</a>
                 </div>
             </div>
+            <!-- Collapsible Body -->
             <div class="collapsible-body white">
+                <!-- Ingredients -->
                 <h5 class="teal-text text-lighten-1"><i class="fas fa-carrot prefix pink-text text-lighten-1"></i>
                     &nbsp;Ingredients</h5>
                 <p class="wrap">{{ recipe.ingredients }}</p>
+                <!-- Materials -->
                 <h5 class="teal-text text-lighten-1"><i
                         class="fas fa-utensil-spoon prefix pink-text text-lighten-1"></i> &nbsp;Materials</h5>
                 <p class="wrap">{{ recipe.material_items }}</p>
+                <!-- Method -->
                 <h5 class="teal-text text-lighten-1"><i class="fas fa-list-ol prefix pink-text text-lighten-1"></i>
                     &nbsp;Method</h5>
                 <p class="wrap">{{ recipe.method }}</p>
+                <!-- Category -->
                 <span class="subhead1 teal-text text-lighten-1"><i
                         class="fas fa-th-large prefix pink-text text-lighten-1"></i> &nbsp;Category:</span><span>
                     {{ recipe.category }}</span>
+                <!-- Image Link and Submission Details -->
                 <div class="imgstyle">
                     <img class="responsive-img limit-height" src="{{ recipe.image_link }}" alt="recipe title">
                     <p class="sub-details">(Submitted by {{ recipe.submitted_by }} on {{ recipe.date_submitted }})</p>
                 </div>
-
             </div>
         </li>
         {% endif %}

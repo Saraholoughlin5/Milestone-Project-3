@@ -3,10 +3,10 @@
 
 <div class="row">
     <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('login') }}">
+        <!-- Log In Card Panel -->
         <div class="card-panel">
-
+            <!-- Page Heading -->
             <h3 class="center-align brand-text pink-text text-lighten-1">Log In</h3><br>
-
             <!-- Username Field -->
             <div class="row">
                 <div class="input-field col s12">
@@ -16,7 +16,6 @@
                     <label for="username">Username</label>
                 </div>
             </div>
-
             <!-- Password Field -->
             <div class="row">
                 <div class="input-field col s12">
@@ -26,11 +25,11 @@
                     <label for="password">Password</label>
                 </div>
             </div>
-
-            <!-- Login Button -->
+            <!-- Submit Button -->
             <div class="row center-align">
                 <button type="submit" class="s12 btn-large purple darken-3">Submit</button>
             </div>
+            <!-- Sign Up Button -->
             <div class="row center-align">
                 <p class="center-align">Want to join Kooky? <a href="{{ url_for('join') }}"
                         class="pink-text text-lighten-1">Sign Up</a></p>
