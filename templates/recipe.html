@@ -78,7 +78,7 @@
                     {{ recipe.category }}</span>
                 <!-- Image and Submission Details -->
                 <div class="imgstyle">
-                    <img class="responsive-img limit-height" src="{{ recipe.image_link }}" alt="recipe image">
+                    <img class="responsive-img limit-height" src="{{ recipe.image_link }}" alt="{{ recipe.recipe_title }}">
                     <p class="sub-details">(Submitted by {{ recipe.submitted_by }} on {{ recipe.date_submitted }})</p>
                 </div>
             </div>

@@ -63,18 +63,20 @@ def join():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        # Confirm username exists in database
+        # Confirm username exists in database        
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
             if check_password_hash(
                 # Confirm hashed password matches users input
-                existing_user["password"], request.form.get("password")):
+                existing_user["password"], 
+                    request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     flash("Welcome, {}!".format(
                         request.form.get("username")))
-                    return redirect(url_for("profile", username=session["user"]))
+                    return redirect(url_for("profile", 
+                                    username=session["user"]))
 
             else:
                 # Incorrect user password 
@@ -98,7 +100,8 @@ def profile(username):
 
     if session["user"]:
         # User's profile page is displayed
-        return render_template("profile.html", username=username, recipe=recipe)
+        return render_template("profile.html", 
+                               username=username, recipe=recipe)
 
     return redirect(url_for("login"))
 
