@@ -1,6 +1,6 @@
 # **Milestone Project 3**
-## **Kooky Kids Recipes**
 # Table of Contents
+
 
 1. [Purpose and Value](#purpose)
 2. [Site Pages](#sitepgs)
@@ -19,9 +19,47 @@
 	3. [Structure Plane](#structure)
     4. [Skeleton Plane](#skeleton)
 	5. [Surface Plane](#surface)
+5. [User Stories](#userstories)
+	1. [First Time User](#firsttime)
+	2. [Returning User/Frequent User](#returning)
+	3. [Admin User](#admin)
+6. [Testing](#testing)
+    1. [User Testing](#usertesting)
+	2. [App Testing](#apptesting)
+	3. [Bug Fixes](#bug)
+	4. [Browser Compatability](#bcompatability)
+	5. [Device Compatability](#dcompatability)
+7. [Validation](#validation)
+8. [Design](#design)
+	1. [Wireframes](#wireframes)
+	2. [Colour Palette](#palette)
+	3. [Images](#images)
+	4. [Typography](#typography)
+	5. [Current Features](#current)
+	6. [Future Features](#future)
+9. [Technologies](#technologies)
+	1. [Languages](#languages)
+	2. [Frameworks and Libraries](#frameworks)
+10. [Deployment](#deployment)
+11. [Credit and Acknowledgements](#credits)
+	1. [Mentor](#mentor)
+	2. [Code](#code)
+    3. [Commits](#commits)
+	4. [Images](#imagesa)
+	5. [Text Content](#textcontent)
 
 
-## Kooky Kids Recipe App
+
+
+
+# Kooky Kids Recipe App - Milestone Project 3
+
+GitHub Repository: https://github.com/Saraholoughlin5/Milestone-Project-3
+
+Heroku App: https://milestone-3-kids-recipes.herokuapp.com/
+
+![alt Kooky Kids Homepage](static/img/design/homepage.PNG "Kooky Kids Homepage" )
+
 
 ### **Purpose and Value**<a name="purpose"></a>
 
@@ -29,7 +67,9 @@ The purpose of the Kooky Kids recipe app is to display easy to follow, cooking-f
 The recipes are easy to find and view, and easy to follow.  
 Users can read each recipe without logging in, however, if users do join the site (create a user profile) and log in they can then also create, edit and delete their own recipes. 
 An Admin account can police the site and edit or delete any unsuitable additions.
-Users can document and edit their own recipes, visible to them on their own Profile page. The site is visually appealing to younger users, and this aims to encourage repeated use.
+Values include provision of user ability to document and edit their own recipes, visible to them on their own Profile page. The site is visually appealing to younger users, and this aims to encourage repeated use.
+As per one of the project objectives, users can use the site to create, read, edit and delete content (perform CRUD calls to the Mongo database).
+
 
 ### **Site Pages**<a name="sitepgs"></a>
 
@@ -78,6 +118,7 @@ The [mock-ups](http://ami.responsivedesign.is/?url=http%3A%2F%2Fmilestone-3-kids
 
 ![alt Responsive Design](static/img/layout/am_i_responsive.PNG "Responsive Design")
 
+
 ### **UX (User Experience)** <a name="userexperience"></a>
 
 #### **Strategy Plane**<a name="strategy"></a>
@@ -102,3 +143,227 @@ Balsamiq wireframes were used to plan the initial layout of the app (desktop and
 #### **Surface Plane**<a name="surface"></a>
 The colour scheme of the app was drawn heavily from the background image, which suits the them of the database content very well. The panels, buttons and borders are very subdued and mainly black and white, but the colour in the background image and navigation bar/footer/action buttons counteract this simplicity.
 
+
+### **User Stories**<a name="userstories"></a>
+
+#### **First Time User**<a name="firsttime"></a>
+
+- I am a 10 year old boy looking for some fun, easy recipes that contain ingredients I like
+- I am a mother of 3 and I want to get my children involved in some hands-on food preparation
+- I work at a preschool and we do not have access to a cooker or oven, but the kids have expressed an interest in preparing their own food
+- It's clear from landing on the Kooky Kids homepage that I am the intended user of the site
+- I like that I can see all of the recipes without having to create a profile page
+- I also like having the option to create a profile page so that I can add my own creations
+- The recipes are clearly laid out and easy to follow
+- The background image is fun and inviting
+- Joining the Kooky Kids community is quick and easy, and I can immediately add my own recipes
+- Adding my own recipes is very easy, as the form contains helper text beneath each field, as needed
+- Finding my own recipes after adding them is also easy, as instructions are clear and the recipe appears where expected
+- Editing my recipe(s) is possible with the click of a button
+- Deleting my recipe(s) is also possible with the click of a button, and only via my profile page
+- I feel secure that I will not delete a recipe in error, as there is a confirmation modal supplied
+- I can immediately identify which episodes are mine on the homepage, as the 'Edit' button is present for my recipes only (when I am logged in)
+- Logging in and out is intuitive, and flash messages confirming these actions are reassuring
+- Flash messages are also available when I add or edit a recipe
+- I can see the name of the user that submitted the recipe, and the date, beneath the recipe image
+- I can search the recipe ingredients without having to trawl through each recipe's contents
+- I can immediately see if allergens are present in a recipe, as there is an icon and tooltip to alert me
+- If I change the URL to try to access the 'Add' or 'Edit' pages when I am logged out, or for that of a different user, I am prevented from doing so (warning message displayed)
+- I can find the app's social media links with ease 
+- I can view and use the app without error on a variety of devices, browsers and screen sizes
+
+#### **Returning User/Frequent User**<a name="returning"></a>
+
+- I can view all recipes on the Kooky Kids homepage before I log in
+- I can log back in to my profile with ease
+- I can immediately identify my recipes on the homepage after logging in
+- I can edit or delete my recipes 
+- I can update the allergen status of my recipes and other details by clicking on the 'Edit' button
+- I can change the image of my recipe for a better one!
+- I can log out with ease 
+- I can view the app on a variety of devices, browsers and screen sizes
+
+#### **Admin User**<a name="admin"></a>
+
+- I can log in to my Kooky Kids account with ease
+- I can view all recipes on the homepage
+- My own recipes are easily identifiable on the homepage after I log in ('Edit' button present beside the recipe title)
+- If I navigate to my profile page I can see that all of the recipes submitted to the app are visible 
+- The 'Edit' and 'Delete' buttons are also available and functional
+- I can easily police the site via my profile page, to either update or remove a non-compliant Recipe
+ 
+
+### **Testing**<a name="testing"></a>
+
+User testing was employed to ensure that the site operates as expected when deployed. The navigation and functionality was checked for each page. Links were also tested.
+
+App testing was carried out at various stages when setting up the app. Browser and device compatability was also checked. Please find details below.
+
+[pending]
+
+
+### **Validation**<a name="validation"></a>
+
+**HTML** The HTML code was validated at https://validator.w3.org/. [HTML validated.](static/img/validation/html_validation.PNG)<br>
+**CSS** The CSS code was validated at https://jigsaw.w3.org/css-validator/. NOTE: The lone error displayed belongs to Materialize. [CSS validated.](static/img/validation/css_validation.PNG)<br>
+**PEP8** Python code was validated for PEP8 compliance at http://pep8online.com/. [PEP8 validated.](static/img/validation/pep8_validation.PNG)<br>
+
+
+### **Design**<a name="design"></a>
+
+#### **Wireframes**<a name="wireframes"></a>
+The app display layout (desktop/mobile) was planned using Balsamiq (www.balsamiq.com). These were the initial wireframes created at the start of the project, and the final views have evolved during creation of the app.
+
+
+![alt Wireframes](static/img/wireframes/wireframes_mp3.png "Wireframes")
+
+#### **Color Palette**<a name="palette"></a>
+The colours for the app navigation menu, recipe information, forms and floating action button were inspired by the dynamic and modern background image. 
+A Paint colour-picker was used to identify the RGP components of some of these colours, and some slightly darker colours were also added and used on the site.
+The colour palette was prepared at [Coolers](https://www.coolors.com/) website:
+
+
+![alt Colour Palette](static/img/design/colour_palette.PNG "Colour Palette")
+
+#### **Images**<a name="images"></a>
+The images on the site were sourced from Pexels (www.pexels.com) and Unsplash (www.unsplash.com). The background image was found at Ohh Deer blog (https://blog.ohhdeer.com/). Further details are available in the Credits & Acknowledgements section below. 
+Even though the Materialize framework provides it's own icons, [Font Awesome](https://fontawesome.com/) was used for the nav menu, recipe and social media icons in the app. 
+The recipe images are unpixelated and responsive so they are not stretched. They have been allocated a max-height attribute so that are not too large, and they fit comfortably in the collapsible body, whether portrait or landscape. As only one recipe can be viewed at a time, uniformity of image layout is not too strict.
+Without the background image, the app is mainly made up of white card-panels and collapsibles. This is testament to the visual power of a good background image!
+
+#### **Typography**<a name="typography"></a> 
+[Google Fonts](www.fonts.google.com) were used for the text on the app. 
+'Pattaya' font was used for the navbar and sidemenu brand logo/text, page headings and form titles, and footer headings.
+'Montserrat' font was used for the main text of the app, including navigation menu itmes, general page text, form content text, buttons and links.
+
+#### **Current Features**<a name="current"></a>
+- The app contains collapsible accordion elements which provide ease of use when viewing recipes
+- The app also contains flash messages which alert the user to actions performed
+- A search bar is present with 'Clear' and 'Search' functional buttons
+- 'Edit' and 'Delete' buttons are also present and functional
+- Easy-to-use forms are available when users want to add or edit their own recipes
+- A floating action button is availble on large screens to allow users to easily access the site-related social media links
+- For small and medium screens the floating action button was too intrusive, especially when trying to view, add or edit recipes, so the social media links were moved to a footer
+- Admin can edit or delete all user recipes from within their own profile page, which means unsuitable recipes will not remain on the site
+- 'Join' and 'Log In' pages contain links to one another for ease of use for new users
+
+#### **Future Features**<a name="future"></a>
+- 'Delete Profile' feature 
+- Contact Form
+- Live social media accounts
+
+
+### **Technologies**<a name="technologies"></a>
+
+#### **Languages**<a name="languages"></a>
+
+HTML, CSS, JQuery, Python were used to build, style and add functiality to the Kooky Kids app (Milestone Project 3).
+
+#### **Frameworks, Libraries and Scripts**<a name="frameworks"></a>
+
+[GitHub](https://github.com/)<br>
+Cloud-based repository service that hosts the website’s source files
+
+[GitPod](https://gitpod.io/workspaces/)<br>
+Development environment
+
+[Heroku](https://heroku.com/)<br>
+Cloud platform used for the deployment of the app
+
+[Materialize v1.0.0](https://materializecss.com/)<br>
+Provides pre-defined classes for elements of a website.
+
+[Flask](https://flask.palletsprojects.com/en/2.0.x/)<br>
+Micro web framework written in Python.
+
+[Flask PyMongo](https://flask-pymongo.readthedocs.io/en/latest/)<br>
+API that communicates with MongoDB.
+
+[Jinja](https://jinja.palletsprojects.com/en/3.0.x/)<br>
+Engine that passes data to a placeholders in a template.
+
+[Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)<br>
+WSGI web application library
+
+[Font Awesome](https://fontawesome.com/)<br>
+Provides free icons that can be restyled with CSS. 
+
+[Google Fonts](https://fonts.google.com/)<br>
+Provides links to a large variety of fonts and related compatible paired fonts. 
+
+[jQuery](https://jquery.com/)<br>
+JavaScript library
+
+[randomkeygen](https://randomkeygen.com/)<br>
+Random generated secure password
+
+
+### **Deployment**<a name="deployment"></a>
+
+Deployment and version control for the app was carried out with GitHub and Heroku. 
+
+#### Steps
+
+1. Create a new database in Atlas MongoDB (click on the 'Collections' button followed by 'Create Database' in an existing Cluster)
+2. Add collections to the database, for example, 'users', and add key-value pairs for each collection
+2. Create a project repository in GitHub using the Code Institute template, and make sure to check the 'Include all branches' tick-box
+3. Open repository in Gitpod
+4. Create 'app.py', the main app Python file
+5. Create the 'env.py' and 'gitignore' files in Gitpod to store and hide sensitive data
+6. Import the OS and set the required defaults in 'env.py', including a randomly generated 'Secret Key' password
+7. Import the OS again in 'app.py', as well as Flask and the 'env' package
+8. Create a Flask instance at the bottom of the 'app.py' file to ensure the app is properly configured, and enter the required 'host', 'port' and 'debug' values
+9. Log in to Heroku and click on the 'New' button to create the new app
+10. Enter the app name and choose the region, then click the 'Create app' button
+11. Click on 'GitHub' in the 'Deployment Method' section, then enter your GitHub name and the project repository name in the 'Connect to GitHub' fields provided
+12. Once connection is confirmed, click on the 'Reveal Config Vars' button in the 'Config Vars' section
+13. Enter details that match those of the 'env.py' file, then click 'Hide Config Vars'
+14. Push 'env.py' and 'app.py' files to the GitHub repository using bash commands in the Gitpod terminal
+15. Create 2 new files in Gitpod, 'requirements.txt' and 'Procfile', then add, commit and push these files to GitHub
+16. Return to Heroku and click on the 'Deploy' tab, then click on the 'Enable Automatic Deploys' button followed by 'Deploy Branch'
+17. Heroku will display a 'Your app was successfully deployed' message, confirming that it is receiving code from the GitHub repository
+18. Wire up the MongoDB database to the Flask app by installing 'flask-pymongo' and 'dnsython' and update the 'requirements.txt' file also
+19. At the top of the 'app.py' file, import PyMongo and ObjectId, and add further configuration ('MONGO_DB', 'MONGO_URI' and 'SECRET_KEY')
+20. In MongoDB, click on the Cluster 'Overview' tab and click 'Connect'- 'Connect your Application', choosing 'Python' and the required version
+21. Update the database name and password (Database Access page)
+22. Copy the string to the 'MONGO_URI' value in 'env.py' and ensure the database name and password is also updated
+23. Copy this completed string to the 'Config Vars' section in Heroku ('MONGO_URI' field)
+24. Set up an instance of PyMongo (mongo = PyMongo(app) in 'app.py', after the imports and configuration, to ensure Flask and MongoDB can communicate
+25. Import flash, render_template, redirect and request, and render a template to test the connection to the database
+27. Add, commit and push updates to GitHub. Creation of the app can now commence.
+28. To view the app in Heroku, log in, click on the app name and click on the 'Open App' button
+26. For final deployment, ensure that 'debug=False' in 'app.py'
+
+
+### **Credits and Acknowledgements**<a name="credits"></a>
+
+#### **Mentor** <a name="mentor"></a>
+Thank you once again to my mentor Spencer Barriball for his help, reminders, guidance and encouragement.<br>
+
+
+#### **Code**<a name="code"></a>
+The app was created by closely following Code Institute lessons and projects. Python functions, Flask and Jinja code was customised to ensure the app features functioned as desired. 
+Materialize was used to provide elements and classes and JQuery initialisations. Materialize helper classes were also used instead of media queries for responsivity.
+
+
+#### **Commits**<a name="commits"></a>
+After gratefully receiving feedback for previous projects, I have endeavoured to provide more frequent and relative commits, with the commit messages expressed in the imperative mood.
+
+
+#### **Images**<a name="imagesa"></a>
+The background image was sourced from: https://blog.ohhdeer.com/home/wallpaper-of-the-month-may. 
+The recipe images were downloaded from [Unsplash](https://unsplash.com/) and [Pexels](https://pexels.com):
+| Name                                | Image                                       |
+| :---------------------------------- | :------------------------------------------ | 
+| Amirali Mirhashemian Grabowska           | Summer Berry Yoghurt Pots image         |
+| Hans Reniers           | Juicy Fruit Salad         |
+| Karolina Grabowska               | Fruit and Peanut Butter Sandwich         |
+| Peter @petersgriddle             | Tzatziki         |
+| Lisa (@welshie.wonders)               | Sardine and Tomato Toast                  |
+| Mariana Medvedeva                | Jonah's Rainbow Salad Jars                  |
+| Jackie Hope         | Chocolate Peanut Butter Squares                 |
+| Lina Osorio         | Fruity Muesli                 |
+
+
+#### **Text Content**<a name="textcontent"></a>
+The recipes and text were mainly sourced from https://www.allrecipes.com/, and updated by me. I provided all of the remaining text for the app.
