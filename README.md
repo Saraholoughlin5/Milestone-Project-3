@@ -204,8 +204,7 @@ App testing was carried out at various stages when setting up the app. Browser a
 #### **User Testing**<a name="usertesting"></a>
 
 | Test Case               | Action             | Expected Result  | Result           | Status|
-| :-------------------- | :-------------------- | :---------------- | :---------------- | :----- |
-		
+| :-------------------- | :-------------------- | :---------------- | :---------------- | :----- |		
 | Open App (Heroku)| Click on 'Open App' button in Heroku| App homepage displayed| App homepage displayed|  Pass  |
 | Open App (Link)| Click on the app link 	App homepage displayed| App homepage displayed| App homepage displayed|  Pass  |
 | Check nav bar links| Click on the 'Log In' menu item| The 'Log In' page is displayed| The 'Log In' page is displayed|  Pass  |
@@ -213,6 +212,23 @@ App testing was carried out at various stages when setting up the app. Browser a
 | | Click on the 'Join' link in the navigation bar| The 'Join' page is displayed| The 'Join' page is displayed|  Pass  |
 | Check side menu links| Click on the 'hamburger' icon| Side menu is displayed| Side menu is displayed|  Pass  |
 | | Click on the 'Log In' menu item| The 'Log In' page is displayed| The 'Log In' page is displayed|  Pass  |
+| | Click on the 'hamburger' icon again, then the 'Home' link| The user is returned to the homepage| The user is returned to the homepage|  Pass  |
+| | Click on the 'hamburger' icon again, then the 'Join' link| The 'Join' page is displayed| The 'Join' page is displayed|  Pass  |
+| | Click on the 'hamburger' icon again, then the 'Home' link| The user is returned to the homepage| The user is returned to the homepage|  Pass  |
+| View Recipe List on Homepage| Scroll down to view the list of recipes| All recipes titles are listed in a collapsible accordion element| All recipes titles are listed in a collapsible accordion element|  Pass  |
+| Search for Ingredient| Click in the 'Search' bar | Text can be entered| Text can be entered|  Pass  |
+| | Type 'strawberries' and click  the 'Search' button| All recipes that contain 'strawberries' are listed |All recipes that contain 'strawberries' are listed |  Pass  |
+| | Scroll down to view the full search results| Scrolling down reveals the list of recipe results in full| Scrolling down reveals the list of recipe results in full|  Pass  |
+| | Type in an ingredient that is not part of a listed recipe| The item you are searching for is not listed...' message displayed| The item you are searching for is not listed...' message displayed|  Pass  |
+| | Click the 'Clear' button to refresh the homepage| Homepage and recipe list displayed, as expected| Homepage and recipe list displayed, as expected|  Pass  |
+| Check the 'Clear' button functionality| Enter random text and click on the 'Clear' button|  Enter random text and click on the 'Clear' button|Mild shadow present|  Pass  |
+| View a Recipe| Click on the collapsible header for one of the listed recipes| The recipe is displayed in full| The recipe is displayed in full|  Pass  |
+| | Click on a second recipe title| The first recipe view collapses and the second recipe is displayed in full instead| The first recipe view collapses and the second recipe is displayed in full instead|  Pass  |
+| | Click on the second recipe title again| The second recipe view collapses and all recipe titles are listed again| The second recipe view collapses and all recipe titles are listed again|  Pass  |
+| View recipe submission details| Expand a recipe and scroll down to the image displayed| The submission details (submitted by name and date) are displayed discreetly beneath the recipe image| The submission details (submitted by name and date) are displayed discreetly beneath the recipe image|  Pass  |
+| Join Kooky Kids app| Click on the 'Join' menu item to create a profile| The 'Join Kooky Kids' form is displayed| The 'Join Kooky Kids' form is displayed|  Pass  |
+| | Click on the 'password' field and enter e.g. eat| Min character length is '5', password field line displays red| Min character length is '5', password field line displays red|  Pass  |
+| | Click on the 'Submit' button| An error message is displayed on the password field| An error message is displayed on the password field|  Pass  |
 
 
 
