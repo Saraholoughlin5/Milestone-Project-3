@@ -9,7 +9,7 @@
     </h3>
     <!-- Profile Text Card Panel -->
     <div class="row card-panel">
-        <p class="main-text">Welcome to your Kooky profile page. Here, you can view and delete any recipes you have
+        <p class="main-text">Welcome to your Kooky Kids profile page. Here, you can view and delete any recipes you have
             submitted.</p>
         <p class="main-text">To submit a recipe, please click on the 'Add Recipe' link in the menu - this will display
             the recipe
@@ -54,7 +54,7 @@
             <div id="{{ recipe._id }}" class="modal">
                 <div class="modal-content">
                     <h4 class=" brand-text pink-text lighten-1">Confirm Delete</h4>
-                    <p>Are you sure you want to permanently delete this recipe from Kooky?</p>
+                    <p>Are you sure you want to permanently delete this recipe from Kooky Kids?</p>
                 </div>
                 <div class="modal-footer">
                     {% if session.user|lower == "admin" %}
@@ -124,7 +124,7 @@
             <div id="{{ recipe._id }}" class="modal">
                 <div class="modal-content">
                     <h4 class=" brand-text pink-text lighten-1">Confirm Delete</h4>
-                    <p>Are you sure you want to permanently delete this recipe from Kooky?</p>
+                    <p>Are you sure you want to permanently delete this recipe from Kooky Kids?</p>
                 </div>
                 <div class="modal-footer">
                     {% if session.user|lower == recipe.submitted_by|lower %}
