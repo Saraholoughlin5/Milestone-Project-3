@@ -355,14 +355,14 @@ The background image was sourced from: https://blog.ohhdeer.com/home/wallpaper-o
 The recipe images were downloaded from [Unsplash](https://unsplash.com/) and [Pexels](https://pexels.com):
 | Name                                | Image                                       |
 | :---------------------------------- | :------------------------------------------ | 
-| Amirali Mirhashemian Grabowska           | Summer Berry Yoghurt Pots image         |
-| Hans Reniers           | Juicy Fruit Salad         |
-| Karolina Grabowska               | Fruit and Peanut Butter Sandwich         |
-| Peter @petersgriddle             | Tzatziki         |
-| Lisa (@welshie.wonders)               | Sardine and Tomato Toast                  |
-| Mariana Medvedeva                | Jonah's Rainbow Salad Jars                  |
-| Jackie Hope         | Chocolate Peanut Butter Squares                 |
-| Lina Osorio         | Fruity Muesli                 |
+| Amirali Mirhashemian Grabowska           | Summer Berry Yoghurt Pots recipe image         |
+| Hans Reniers           | Juicy Fruit Salad recipe image         |
+| Karolina Grabowska               | Fruit and Peanut Butter Sandwich recipe image         |
+| Peter @petersgriddle             | Tzatziki recipe image         |
+| Lisa (@welshie.wonders)               | Sardine and Tomato Toast recipe image                  |
+| Mariana Medvedeva                | Jonah's Rainbow Salad Jars recipe image                  |
+| Jackie Hope         | Chocolate Peanut Butter Squares recipe image                 |
+| Lina Osorio         | Fruity Muesli recipe image                 |
 
 
 #### **Text Content**<a name="textcontent"></a>
