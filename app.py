@@ -133,7 +133,7 @@ def add_recipe():
         # Recipe added to list on homepage
         flash("Recipe successfully added!")
         return redirect(url_for("get_recipe"))
-      
+     
     return render_template("add_recipe.html")
 
 

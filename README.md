@@ -199,7 +199,21 @@ User testing was employed to ensure that the site operates as expected when depl
 
 App testing was carried out at various stages when setting up the app. Browser and device compatability was also checked. Please find details below.
 
-[pending]
+### **Testing**<a name="testing"></a>			
+			
+#### **User Testing**<a name="usertesting"></a>
+
+| Test Case               | Action             | Expected Result  | Result           | Status|
+| :-------------------- | :-------------------- | :---------------- | :---------------- | :----- |
+		
+| Open App (Heroku)| Click on 'Open App' button in Heroku| App homepage displayed| App homepage displayed|  Pass  |
+| Open App (Link)| Click on the app link 	App homepage displayed| App homepage displayed| App homepage displayed|  Pass  |
+| Check nav bar links| Click on the 'Log In' menu item| The 'Log In' page is displayed| The 'Log In' page is displayed|  Pass  |
+| | Click on the 'Home' link in the navigation bar| The user is returned to the homepage| The user is returned to the homepage|  Pass  |
+| | Click on the 'Join' link in the navigation bar| The 'Join' page is displayed| The 'Join' page is displayed|  Pass  |
+| Check side menu links| Click on the 'hamburger' icon| Side menu is displayed| Side menu is displayed|  Pass  |
+| | Click on the 'Log In' menu item| The 'Log In' page is displayed| The 'Log In' page is displayed|  Pass  |
+
 
 
 ### **Validation**<a name="validation"></a>
@@ -330,8 +344,8 @@ Deployment and version control for the app was carried out with GitHub and Herok
 23. Copy this completed string to the 'Config Vars' section in Heroku ('MONGO_URI' field)
 24. Set up an instance of PyMongo (mongo = PyMongo(app) in 'app.py', after the imports and configuration, to ensure Flask and MongoDB can communicate
 25. Import flash, render_template, redirect and request, and render a template to test the connection to the database
-27. Add, commit and push updates to GitHub. Creation of the app can now commence.
-28. To view the app in Heroku, log in, click on the app name and click on the 'Open App' button
+27. Add, commit and push updates to GitHub. Creation of the app can now commence 
+28. To view the app in Heroku, log in, click on the app name and click on the 'Open App' button. You can also run "python3 app.py" via the GitPod terminal, and open in browser from the resulting port
 26. For final deployment, ensure that 'debug=False' in 'app.py'
 
 
