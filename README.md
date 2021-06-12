@@ -49,8 +49,6 @@
 
 
 
-
-
 # Kooky Kids Recipe App - Milestone Project 3
 
 GitHub Repository: https://github.com/Saraholoughlin5/Milestone-Project-3
@@ -73,16 +71,16 @@ As per one of the project objectives, users can use the site to create, read, ed
 ### **Site Pages**<a name="sitepgs"></a>
 
 #### **'Home' page**<a name="homepage"></a>
-The 'Home' page contains the navigation menu (side navigation menu in mobile/medium view), a 'Welcome' message, a search bar that enables users to search the recipe ingredients, the current list of recipes displayed in a collapsible accordion element and social media links (via a floating action button on large view, and a footer in medium and small views).
+The 'Home' page contains the navigation menu (side navigation menu in mobile view), a 'Welcome' message, a search bar that enables users to search the recipe ingredients, the current list of recipes displayed in a collapsible accordion element and social media links (via a floating action button on large view, and a footer in medium and small views).
 Users can click on the name of any recipe to view it in full (invited to do so by use of a caret symbol that precedes each recipe title).
-Users who are logged in can see an 'Edit' button on their own recipes, which identifies their recipes and allows them to make changes. Users cannot delete recipies via the homepage.  
+Users who are logged in can see an 'Edit' button on their own recipes, which identifies their recipes and allows them to make changes. Users cannot delete recipies via the homepage, only via their Profile page.  
 
 #### **'Log In' page**<a name="login"></a>
-The 'Log In' page contains a card which displays the 'Username' and 'Password' fields, a 'Submit' button and a link to sign up via the 'Join' page.
+The 'Log In' page contains a card-panel which displays the 'Username' and 'Password' fields, a 'Submit' button and a link to sign up via the 'Join' page.
 The background image is prominent in this view, which invites inspection of the imagery and appeals to the target demographic.  
 
 #### **'Join' page**<a name="join"></a>
-Similar layout to the 'Log In' page. This page contains a card which displays the 'Username' and 'Password' fields, a 'Submit' button, and a link to the 'Log In' page, should the user have a profile already set up.  
+Similar layout to the 'Log In' page. This page contains a card-panel which displays the 'Username' and 'Password' fields, a 'Submit' button, and a link to the 'Log In' page, should the user have a profile already set up.  
 
 #### **'Profile' page**<a name="profile"></a>
 The 'Profile' page displays a 'Welcome' flash message on login, information related to the page contents, the list of recipes submitted by this user, and 'Edit' and 'Delete' buttons per recipe.
@@ -121,23 +119,25 @@ The [mock-ups](http://ami.responsivedesign.is/?url=http%3A%2F%2Fmilestone-3-kids
 ### **UX (User Experience)** <a name="userexperience"></a>
 
 #### **Strategy Plane**<a name="strategy"></a>
-The Kooky Kids app could be used in schools or summer-camps, or as part of an initiative to encourage independent or healthy eating amongst children and young adults.  
+The Kooky Kids app is designed to be easy to use and to appeal to a youth-related demographic, from small children to teenagers and parents. It could, for example, be adapted for use in schools or summer-camps, or as part of an initiative to encourage independent or healthy eating amongst children and young adults.  
 The background image and colour scheme are fun and draws the correct age group in, and are dynamic enough to appeal to a variety of users. It is clear to the user how the site operates, and each feature is easy to use.   
 
 #### **Scope Plane**<a name="scope"></a>
-The app is simple to use, and each feature is clear and straight-forward to user. Users can click on the ‘Log In’ or ‘Join’ menu options to start submitting recipes. The can edit or delete their recipes easily via the buttons provided. 
+The app is simple to use, and each feature is clear and straight-forward when displayed to the user. Visitors can view all recipes on the homepage, but cannot edit or delete them. 
+Users can click on the ‘Log In’ or ‘Join’ menu options to start submitting recipes. The can edit or delete their recipes easily via the buttons provided. 
 A floating button can be clicked on to view the social media links (visible in the footer on small and medium screens).  
 Relevant flash messages are also displayed for key functions, such as joining the app, logging in or out, updating or deleting a recipe, or as a warning when e.g. a username is already taken. 
 The recipe display (collapsible) is intuitive and provides the expected information.  
 
 #### **Structure Plane**<a name="structure"></a>
-The app is structured so that the layout is consistent on many of the pages. 'Log In' and 'Join' pages are uniform, and non-jarring to the user. 
+The app is structured so that the layout is consistent on many of the pages. The background image is the same across all pages. The 'Log In' and 'Join' pages are uniform, and present clearinstructions for the user. 
 The 'Home', 'Profile', 'Add Recipe' and 'Edit Recipe' views are consistent and provide enough information for the user to be comfortable with navigating each step of each page. 
 The background image is also consistent throught the app.
 Links and buttons work as expected.  
 
 #### **Skeleton Plane**<a name="skeleton"></a>
 Balsamiq wireframes were used to plan the initial layout of the app (desktop and portrait mobile view). The app appears similar to the wireframes, but looks much more vivacious due to the addition of the background image and related colour scheme.  
+Layout of the app evolved during the creation period.  
 
 #### **Surface Plane**<a name="surface"></a>
 The colour scheme of the app was drawn heavily from the background image, which suits the them of the database content very well. The panels, buttons and borders are very subdued and mainly black and white, but the colour in the background image and navigation bar/footer/action buttons counteract this simplicity.  
@@ -444,7 +444,7 @@ Thank you once again to my mentor Spencer Barriball for his help, reminders, gui
 
 
 #### **Code**<a name="code"></a>
-The app was created by closely following Code Institute lessons and projects. Python functions, Flask and Jinja code was customised to ensure the app features functioned as desired. 
+The app was created by referring to the Code Institute Backend Development mini-project. Python functions, Flask and Jinja code was customised to ensure the app features functioned as desired. 
 Materialize was used to provide elements and classes and JQuery initialisations. Materialize helper classes were also used instead of media queries for responsivity.  
 
 
@@ -468,4 +468,4 @@ The recipe images were downloaded from [Unsplash](https://unsplash.com/) and [Pe
 
 
 #### **Text Content**<a name="textcontent"></a>
-The recipes and text were mainly sourced from https://www.allrecipes.com/, and updated by me. I provided all of the remaining text for the app.
+Recipes from https://www.allrecipes.com/ were used as source material. I provided all of the remaining text for the app.
