@@ -1,4 +1,4 @@
-# **Milestone Project 3**
+# **Milestone Project 3**  &nbsp;
 # Table of Contents
 
 
@@ -25,10 +25,9 @@
 	3. [Admin User](#admin)
 6. [Testing](#testing)
     1. [User Testing](#usertesting)
-	2. [App Testing](#apptesting)
-	3. [Bug Fixes](#bug)
-	4. [Browser Compatability](#bcompatability)
-	5. [Device Compatability](#dcompatability)
+	2. [Defensive User Testing](#defensive)
+    3. [App Testing](#apptest)
+	4. [Bug Fixes](#bugfixes)
 7. [Validation](#validation)
 8. [Design](#design)
 	1. [Wireframes](#wireframes)
@@ -46,7 +45,7 @@
 	2. [Code](#code)
     3. [Commits](#commits)
 	4. [Images](#imagesa)
-	5. [Text Content](#textcontent)
+	5. [Text Content](#textcontent)  
 
 
 
@@ -58,7 +57,7 @@ GitHub Repository: https://github.com/Saraholoughlin5/Milestone-Project-3
 
 Heroku App: https://milestone-3-kids-recipes.herokuapp.com/
 
-![alt Kooky Kids Homepage](static/img/design/homepage.PNG "Kooky Kids Homepage" )
+![alt Kooky Kids Homepage](static/img/design/homepage.PNG "Kooky Kids Homepage" )  
 
 
 ### **Purpose and Value**<a name="purpose"></a>
@@ -68,7 +67,7 @@ The recipes are easy to find and view, and easy to follow.
 Users can read each recipe without logging in, however, if users do join the site (create a user profile) and log in they can then also create, edit and delete their own recipes. 
 An Admin account can police the site and edit or delete any unsuitable additions.
 Values include provision of user ability to document and edit their own recipes, visible to them on their own Profile page. The site is visually appealing to younger users, and this aims to encourage repeated use.
-As per one of the project objectives, users can use the site to create, read, edit and delete content (perform CRUD calls to the Mongo database).
+As per one of the project objectives, users can use the site to create, read, edit and delete content (perform CRUD calls to the Mongo database).  
 
 
 ### **Site Pages**<a name="sitepgs"></a>
@@ -76,72 +75,72 @@ As per one of the project objectives, users can use the site to create, read, ed
 #### **'Home' page**<a name="homepage"></a>
 The 'Home' page contains the navigation menu (side navigation menu in mobile/medium view), a 'Welcome' message, a search bar that enables users to search the recipe ingredients, the current list of recipes displayed in a collapsible accordion element and social media links (via a floating action button on large view, and a footer in medium and small views).
 Users can click on the name of any recipe to view it in full (invited to do so by use of a caret symbol that precedes each recipe title).
-Users who are logged in can see an 'Edit' button on their own recipes, which identifies their recipes and allows them to make changes. Users cannot delete recipies via the homepage.
+Users who are logged in can see an 'Edit' button on their own recipes, which identifies their recipes and allows them to make changes. Users cannot delete recipies via the homepage.  
 
 #### **'Log In' page**<a name="login"></a>
 The 'Log In' page contains a card which displays the 'Username' and 'Password' fields, a 'Submit' button and a link to sign up via the 'Join' page.
 The background image is prominent in this view, which invites inspection of the imagery and appeals to the target demographic.  
 
 #### **'Join' page**<a name="join"></a>
-Similar layout to the 'Log In' page. This page contains a card which displays the 'Username' and 'Password' fields, a 'Submit' button, and a link to the 'Log In' page, should the user have a profile already set up.
+Similar layout to the 'Log In' page. This page contains a card which displays the 'Username' and 'Password' fields, a 'Submit' button, and a link to the 'Log In' page, should the user have a profile already set up.  
 
 #### **'Profile' page**<a name="profile"></a>
 The 'Profile' page displays a 'Welcome' flash message on login, information related to the page contents, the list of recipes submitted by this user, and 'Edit' and 'Delete' buttons per recipe.
-Clicking on each recipe title displays the recipe details in full.
+Clicking on each recipe title displays the recipe details in full.  
 
 #### **'Add Recipe' page**<a name="addrecipe"></a>
 The 'Add Recipe' page can only be accessed when a user is logged in (if the url is updated to try and cheat this (e.g. user is logged out), a message is displayed to notify the user that they have no access to the page. 
 The page displays some relevant text information, followed by the 'Recipe Details' form.
 The form contains inputs, textareas, select options field and a date-picker. A 'Submit' button is also displayed.
-Once a recipe is submitted, the user is redirected to the 'Home' page to view their submission.
+Once a recipe is submitted, the user is redirected to the 'Home' page to view their submission.  
 
 #### **'Edit Recipe' page**<a name="editrecipe"></a>
 The 'Edit Recipe' page can be accessed in two ways; via the 'Edit' button on the collapsible headings per recipe on the homepage, and also in the same place on the user's 'Profile' page. 
 The user must be logged in to edit their recipes. 
-Admin can edit their own recipes via the homepage, but can edit all user's recipes via their Admin 'Profile' page
+Admin can edit their own recipes via the homepage, but can edit all user's recipes via their Admin 'Profile' page.  
 
 #### **'Delete Recipe' button**<a name="delrecipe"></a>
 The 'Delete Recipe' button is only accessible on a logged in user's 'Profile' page. It is available to the right of the 'Edit' button on the collapsible header (recipe title). 
 When the 'Delete' button is clicked on, a modal is displayed to confirm with the user that they want to permanently delete their recipe. This prevents accidental deletion of the user's submission. 
 Once a recipe is deleted, the user is redirected back to their 'Profile' page, and they can confirm that the recipe is indeed no longer listed. It is also removed from the list on the homepage.
-Admin can delete every user's recipe via the Admin 'Profile' page.
+Admin can delete every user's recipe via the Admin 'Profile' page.  
 
 #### **'Log Out' menu item**<a name="logout"></a>
 The 'Log Out' menu item can be clicked to end the user session. A flash message alerts the user that they have been successfully logged out of their profile.
-The 'Log In' page is displayed once more.
+The 'Log In' page is displayed once more.  
 
 ### **Responsivity**<a name="responsivity"></a>
 The app is responsive on a variety of screen types and sizes. It has been checked via the browser 'Inspect' tool list of responsive devices, both portrait and landscape.
 It has also been checked on a variety of browsers, including Chrome, Microsoft Edge, and Safari.
 [Materialize](https://materializecss.com/) classes and helpers were used to ensure that each page looks and behaves and expected on each screen size.
-The [mock-ups](http://ami.responsivedesign.is/?url=http%3A%2F%2Fmilestone-3-kids-recipes.herokuapp.com%2Fget_recipe#) display various sections of the 'Home' and 'Log In' pages: 
+The [mock-ups](http://ami.responsivedesign.is/?url=http%3A%2F%2Fmilestone-3-kids-recipes.herokuapp.com%2Fget_recipe#) display various sections of the 'Home' and 'Log In' pages:   
 
-![alt Responsive Design](static/img/layout/am_i_responsive.PNG "Responsive Design")
+![alt Responsive Design](static/img/layout/am_i_responsive.PNG "Responsive Design")  
 
 
 ### **UX (User Experience)** <a name="userexperience"></a>
 
 #### **Strategy Plane**<a name="strategy"></a>
 The Kooky Kids app could be used in schools or summer-camps, or as part of an initiative to encourage independent or healthy eating amongst children and young adults.  
-The background image and colour scheme are fun and draws the correct age group in, and are dynamic enough to appeal to a variety of users. It is clear to the user how the site operates, and each feature is easy to use. 
+The background image and colour scheme are fun and draws the correct age group in, and are dynamic enough to appeal to a variety of users. It is clear to the user how the site operates, and each feature is easy to use.   
 
 #### **Scope Plane**<a name="scope"></a>
 The app is simple to use, and each feature is clear and straight-forward to user. Users can click on the ‘Log In’ or ‘Join’ menu options to start submitting recipes. The can edit or delete their recipes easily via the buttons provided. 
 A floating button can be clicked on to view the social media links (visible in the footer on small and medium screens).  
 Relevant flash messages are also displayed for key functions, such as joining the app, logging in or out, updating or deleting a recipe, or as a warning when e.g. a username is already taken. 
-The recipe display (collapsible) is intuitive and provides the expected information. 
+The recipe display (collapsible) is intuitive and provides the expected information.  
 
 #### **Structure Plane**<a name="structure"></a>
 The app is structured so that the layout is consistent on many of the pages. 'Log In' and 'Join' pages are uniform, and non-jarring to the user. 
 The 'Home', 'Profile', 'Add Recipe' and 'Edit Recipe' views are consistent and provide enough information for the user to be comfortable with navigating each step of each page. 
 The background image is also consistent throught the app.
-Links and buttons work as expected.
+Links and buttons work as expected.  
 
 #### **Skeleton Plane**<a name="skeleton"></a>
-Balsamiq wireframes were used to plan the initial layout of the app (desktop and portrait mobile view). The app appears similar to the wireframes, but looks much more vivacious due to the addition of the background image and related colour scheme.
+Balsamiq wireframes were used to plan the initial layout of the app (desktop and portrait mobile view). The app appears similar to the wireframes, but looks much more vivacious due to the addition of the background image and related colour scheme.  
 
 #### **Surface Plane**<a name="surface"></a>
-The colour scheme of the app was drawn heavily from the background image, which suits the them of the database content very well. The panels, buttons and borders are very subdued and mainly black and white, but the colour in the background image and navigation bar/footer/action buttons counteract this simplicity.
+The colour scheme of the app was drawn heavily from the background image, which suits the them of the database content very well. The panels, buttons and borders are very subdued and mainly black and white, but the colour in the background image and navigation bar/footer/action buttons counteract this simplicity.  
 
 
 ### **User Stories**<a name="userstories"></a>
@@ -170,7 +169,7 @@ The colour scheme of the app was drawn heavily from the background image, which 
 - I can immediately see if allergens are present in a recipe, as there is an icon and tooltip to alert me
 - If I change the URL to try to access the 'Add' or 'Edit' pages when I am logged out, or for that of a different user, I am prevented from doing so (warning message displayed)
 - I can find the app's social media links with ease 
-- I can view and use the app without error on a variety of devices, browsers and screen sizes
+- I can view and use the app without error on a variety of devices, browsers and screen sizes  
 
 #### **Returning User/Frequent User**<a name="returning"></a>
 
@@ -181,7 +180,7 @@ The colour scheme of the app was drawn heavily from the background image, which 
 - I can update the allergen status of my recipes and other details by clicking on the 'Edit' button
 - I can change the image of my recipe for a better one!
 - I can log out with ease 
-- I can view the app on a variety of devices, browsers and screen sizes
+- I can view the app on a variety of devices, browsers and screen sizes  
 
 #### **Admin User**<a name="admin"></a>
 
@@ -190,18 +189,25 @@ The colour scheme of the app was drawn heavily from the background image, which 
 - My own recipes are easily identifiable on the homepage after I log in ('Edit' button present beside the recipe title)
 - If I navigate to my profile page I can see that all of the recipes submitted to the app are visible 
 - The 'Edit' and 'Delete' buttons are also available and functional
-- I can easily police the site via my profile page, to either update or remove a non-compliant Recipe
+- I can easily police the site via my profile page, to either update or remove a non-compliant Recipe  
  
 
 ### **Testing**<a name="testing"></a>
 
 User testing was employed to ensure that the site operates as expected when deployed. The navigation and functionality was checked for each page. Links were also tested.
 
-App testing was carried out at various stages when setting up the app. Browser and device compatability was also checked. Please find details below.
+App testing was carried out stages when setting up the app. Browser and device compatability was also checked. Please find details below.  
 
-### **Testing**<a name="testing"></a>			
+### **Testing**<a name="testing"></a>  
 			
 #### **User Testing**<a name="usertesting"></a>
+
+Three users were created: Sarah, David and Admin. Admin can edit and delete all recipes via their Profile page, all other users can only edit or delete their own.
+
+1. Username: Admin  Password: Administrator
+2. Username: David  Password: David
+3. Username: sarah  Password: sarah
+
 
 | Test Case               | Action             | Expected Result  | Result           | Status|
 | :-------------------- | :-------------------- | :---------------- | :---------------- | :----- |		
@@ -229,20 +235,86 @@ App testing was carried out at various stages when setting up the app. Browser a
 | Join Kooky Kids app| Click on the 'Join' menu item to create a profile| The 'Join Kooky Kids' form is displayed| The 'Join Kooky Kids' form is displayed|  Pass  |
 | | Click on the 'password' field and enter e.g. eat| Min character length is '5', password field line displays red| Min character length is '5', password field line displays red|  Pass  |
 | | Click on the 'Submit' button| An error message is displayed on the password field| An error message is displayed on the password field|  Pass  |
+| | Click on the 'password' field and enter e.g. eatfood| The field line is now green - no error| The field line is now green - no error|  Pass  |
+| | Click on the 'Submit' button| Success flash message, new member lands on their profile page| Success flash message, new member lands on their profile page|  Pass  |
+| Log out of Kooky Kids| Click on the 'Log Out' nav menu item| New member is logged out, flash message and 'Log In' page displayed| New member is logged out, flash message and 'Log In' page displayed|  Pass  |
+| Log in with username and password| Enter e.g.  'Janet' and 'eatrecipe' username and password| User lands on their profile page| User lands on their profile page|  Pass  |
+| Add a recipe to Kooky Kids| Remain logged in, click on the 'Add Recipe' menu item| Add a Recipe...' page is displayed| Add a Recipe...' page is displayed|  Pass  |
+| | Scroll down and fill in each form field as requested in the helper text beneath each field| Each field behaves as expected| Each field behaves as expected|  Pass  |
+| | Scroll up to the recipe field and enter 2 letters| Field line turns red, min character length is 5 to allow for quantity| Field line turns red, min character length is 5 to allow for quantity|  Pass  |
+| | Enter each field as requested | Text entered, category chosen from drop-down menu| Text entered, category chosen from drop-down menu|  Pass  |
+| | In the 'Date submitted' field, choose todays date and click 'Select' | Date entered| Date entered|  Pass  |
+| | Enter a new date, and click 'Select'| Date overwritten successfully| Date overwritten successfully|  Pass  |
+| | Click on the browser refresh to reset the form| Add Recipe...' form is reset| Add Recipe...' form is reset|  Pass  |
+| | Fill in each field once again and click 'Submit'| Success flash message, user lands on 'Home' page to confrm addition of new recipe| Success flash message, user lands on 'Home' page to confrm addition of new recipe|  Pass  |
+| | Scroll down to identify user's new recipe| Recipe identifiable as an 'Edit' button is displayed beside the title| Recipe identifiable as an 'Edit' button is displayed beside the title|  Pass  |
+| | Click on the 'Profile' menu item in the nav bar| Users newly added recipe is displayed on their profile page| Users newly added recipe is displayed on their profile page|  Pass  |
+| | | Edit' and 'Delete' buttons are displayed to the right of the recipe title| Edit' and 'Delete' buttons are displayed to the right of the recipe title|  Pass  |
+| | | No other recipes are listed in the user's profile page| No other recipes are listed in the user's profile page|  Pass  |
+| Edit a recipe| Stay logged in and click on the 'Edit' button for your recipe| The 'Edit Recipe' form is displayed on a new page| The 'Edit Recipe' form is displayed on a new page|  Pass  |
+| | Change the title and click the 'Cancel' button at the bottom of the page| The title reverts to the original title| The title reverts to the original title|  Pass  |
+| | Change the title and click the 'Submit' button at the bottom of the page| Flash success message displayed, title updated, edit page still open| Flash success message displayed, title updated, edit page still open|  Pass  |
+| | Click on the 'Profile' link to return to the profile page| Profile page displayed| Profile page displayed|  Pass  |
+| | Check recipe title| Title update has been saved and displays as expected| Title update has been saved and displays as expected|  Pass  |
+| | Click on the 'Home' link in the navigation bar| Homepage displayed| Homepage displayed|  Pass  |
+| | Check the recipe title on the homepage| Mild shadow present| Title update saved and displayed correctly|  Pass  |
+| | Return to the 'Edit Recipe' page via the 'Edit' button on the profile page| Edit recipe page displayed| Edit recipe page displayed|  Pass  |
+| | Update each step, including category and date, and save| All updates saved, displayed correctly on homepage and profile page| All updates saved, displayed correctly on homepage and profile page|  Pass  |
+| Delete a recipe| Click on the 'Profile' menu item in the navbar| Profile page displayed| Profile page displayed|  Pass  |
+| | Click on the 'Delete' button for the listed recipe| Confirm Delete' message displayed| Confirm Delete' message displayed|  Pass  |
+| | Click on the 'Cancel' button| Modal closes, recipe remains listed| Modal closes, recipe remains listed|  Pass  |
+| | Click on the 'Delete' button once again| Confirm Delete' message displayed| Confirm Delete' message displayed|  Pass  |
+| | Click on the modal 'Delete' button| Modal closes, profile page displayed, recipe no longer present| Modal closes, profile page displayed, recipe no longer present|  Pass  |
+| | Click on the 'Home' link in the navigation bar| Homepage displayed| Homepage displayed|  Pass  |
+| | Scroll down the list of recipes| Deleted recipe no longer listed on the homepage| Deleted recipe no longer listed on the homepage|  Pass  |
+| Log out of Kooky Kids| Click on the 'Log Out' nav menu item| User is logged out, flash message and 'Log In' page displayed| User is logged out, flash message and 'Log In' page displayed|  Pass  |
+| | Click on the 'Sign Up' link beneath the 'Submit' button on the 'Log In' page| User lands on the 'Join' page| User lands on the 'Join' page|  Pass  |
+| | Click on the 'Log In' link beneath the 'Submit' button on the 'Join' page| User lands on the 'Log In' page| User lands on the 'Log In' page|  Pass  |
+| View Social Media icons| Click on the floating orange button at the bottom right of the (large) screen| Social media buttons x 4 extend upwards from the button| Social media buttons x 4 extend upwards from the button|  Pass  |
+| | Click each social media link button| Platforms open in their own tab x 4| Platforms open in their own tab x 4|  Pass  |
+| | Scroll down to the footer (medium and small screens only| Footer displayed| Footer displayed|  Pass  |
+| | Click each footer social media link icon| Platforms open in their own tab x 4| Platforms open in their own tab x 4|  Pass  |
+| Footer menu links| In the footer (medium and small screens only), click on each navigation link in turn| User lands on each app page as expected| User lands on each app page as expected|  Pass  |  
 
+
+#### **Defensive User Testing**<a name="defensive"></a>
+
+| Test Case               | Action             | Expected Result  | Result           | Status|
+| :-------------------- | :-------------------- | :---------------- | :---------------- | :----- |
+| Add recipe when logged out| Log out of user profile and go to the homepage| Homepage displayed| Homepage displayed|  Pass  |
+| | In your browser, change 'get_recipe' to 'add_recipe'| Warning message displayed, requesting log in or join to access the feature| Warning message displayed, requesting log in or join to access the feature|  Pass  |
+| Edit recipe when logged out| Log in and click on the 'Edit' button for one of the users recipes| Edit recipe page displayed| Edit recipe page displayed|  Pass  |
+| | Copy the url and log out| Logged out successfully| Logged out successfully|  Pass  |
+| | Highlight the current url, paste the copied url and click 'Enter'| Warning message displayed, requesting log in or join to access the feature| Warning message displayed, requesting log in or join to access the feature|  Pass  |  
+
+
+#### **App Test**<a name="apptest"></a>
+
+| Test Case               | Action             | Expected Result  | Result           | Status|
+| :-------------------- | :-------------------- | :---------------- | :---------------- | :----- |
+| Check app content in browser - initial set up| Open app.py in Gitpod| App import, route and run details displayed| App import, function and run details displayed|  Pass  |
+| | Type 'python3 app.py' in the terminal| Port 8080 is available | Port 8080 is available|  Pass  |
+| | Click 'Open Browser' on the port modal| Browser tab is opened and contains no information| Browser tab is opened and contains no information|  Pass  |
+| | In app.py, add a function called 'hello' to the @app.route| Function added| Function added|  Pass  |
+| | Return the text 'Hello World!' and save the file| File saved| File saved|  Pass  |
+| | Refresh the browser| 'Hello World!' is displayed, confirming that the app is sending to the browser| 'Hello World!' is displayed, confirming that the app is sending to the browser|  Pass  | 
+
+
+#### **Bug Fixes**<a name="bugfixes"></a>
+Any bugs encountered were easily rectified based on the feedback displayed in Werkzeug pages, and by manually re-checking code for minor errors (indentation errors, symbol errors or absence).    
 
 
 ### **Validation**<a name="validation"></a>
 
-**HTML** The HTML code was validated at https://validator.w3.org/. [HTML validated.](static/img/validation/html_validation.PNG)<br>
-**CSS** The CSS code was validated at https://jigsaw.w3.org/css-validator/. NOTE: The lone error displayed belongs to Materialize. [CSS validated.](static/img/validation/css_validation.PNG)<br>
-**PEP8** Python code was validated for PEP8 compliance at http://pep8online.com/. [PEP8 validated.](static/img/validation/pep8_validation.PNG)<br>
+**HTML** The HTML code was validated at https://validator.w3.org/. See results: [HTML validated.](static/img/validation/html_validation.PNG)<br>
+**CSS** The CSS code was validated at https://jigsaw.w3.org/css-validator/. NOTE: The lone error displayed belongs to Materialize. See results: [CSS validated.](static/img/validation/css_validation.PNG)<br>
+**PEP8** Python code was validated for PEP8 compliance at http://pep8online.com/. See results: [PEP8 validated.](static/img/validation/pep8_validation.PNG)<br>  
 
 
 ### **Design**<a name="design"></a>
 
 #### **Wireframes**<a name="wireframes"></a>
-The app display layout (desktop/mobile) was planned using Balsamiq (www.balsamiq.com). These were the initial wireframes created at the start of the project, and the final views have evolved during creation of the app.
+The app display layout (desktop/mobile) was planned using Balsamiq (www.balsamiq.com). These were the initial wireframes created at the start of the project, and the final views have evolved during creation of the app.  
 
 
 ![alt Wireframes](static/img/wireframes/wireframes_mp3.png "Wireframes")
@@ -250,21 +322,21 @@ The app display layout (desktop/mobile) was planned using Balsamiq (www.balsamiq
 #### **Color Palette**<a name="palette"></a>
 The colours for the app navigation menu, recipe information, forms and floating action button were inspired by the dynamic and modern background image. 
 A Paint colour-picker was used to identify the RGP components of some of these colours, and some slightly darker colours were also added and used on the site.
-The colour palette was prepared at [Coolers](https://www.coolors.com/) website:
+The colour palette was prepared at [Coolers](https://www.coolors.com/) website:  
 
 
-![alt Colour Palette](static/img/design/colour_palette.PNG "Colour Palette")
+![alt Colour Palette](static/img/design/colour_palette.PNG "Colour Palette")  
 
 #### **Images**<a name="images"></a>
 The images on the site were sourced from Pexels (www.pexels.com) and Unsplash (www.unsplash.com). The background image was found at Ohh Deer blog (https://blog.ohhdeer.com/). Further details are available in the Credits & Acknowledgements section below. 
 Even though the Materialize framework provides it's own icons, [Font Awesome](https://fontawesome.com/) was used for the nav menu, recipe and social media icons in the app. 
 The recipe images are unpixelated and responsive so they are not stretched. They have been allocated a max-height attribute so that are not too large, and they fit comfortably in the collapsible body, whether portrait or landscape. As only one recipe can be viewed at a time, uniformity of image layout is not too strict.
-Without the background image, the app is mainly made up of white card-panels and collapsibles. This is testament to the visual power of a good background image!
+Without the background image, the app is mainly made up of white card-panels and collapsibles. This is testament to the visual power of a good background image!  
 
 #### **Typography**<a name="typography"></a> 
-[Google Fonts](www.fonts.google.com) were used for the text on the app. 
-'Pattaya' font was used for the navbar and sidemenu brand logo/text, page headings and form titles, and footer headings.
-'Montserrat' font was used for the main text of the app, including navigation menu itmes, general page text, form content text, buttons and links.
+[Google Fonts](https://fonts.google.com/) were used for the text on the app. 
+['Pattaya'](https://fonts.google.com/specimen/Pattaya) font was used for the navbar and sidemenu brand logo/text, page headings and form titles, and footer headings.
+['Montserrat'](https://fonts.google.com/specimen/Montserrat) font was used for the main text of the app, including navigation menu itmes, general page text, form content text, buttons and links.  
 
 #### **Current Features**<a name="current"></a>
 - The app contains collapsible accordion elements which provide ease of use when viewing recipes
@@ -275,19 +347,19 @@ Without the background image, the app is mainly made up of white card-panels and
 - A floating action button is availble on large screens to allow users to easily access the site-related social media links
 - For small and medium screens the floating action button was too intrusive, especially when trying to view, add or edit recipes, so the social media links were moved to a footer
 - Admin can edit or delete all user recipes from within their own profile page, which means unsuitable recipes will not remain on the site
-- 'Join' and 'Log In' pages contain links to one another for ease of use for new users
+- 'Join' and 'Log In' pages contain links to one another for ease of use for new users  
 
 #### **Future Features**<a name="future"></a>
 - 'Delete Profile' feature 
 - Contact Form
-- Live social media accounts
+- Live social media accounts  
 
 
 ### **Technologies**<a name="technologies"></a>
 
 #### **Languages**<a name="languages"></a>
 
-HTML, CSS, JQuery, Python were used to build, style and add functiality to the Kooky Kids app (Milestone Project 3).
+HTML, CSS, JQuery, Python were used to build, style and add functiality to the Kooky Kids app (Milestone Project 3).  
 
 #### **Frameworks, Libraries and Scripts**<a name="frameworks"></a>
 
@@ -330,7 +402,7 @@ Random generated secure password
 
 ### **Deployment**<a name="deployment"></a>
 
-Deployment and version control for the app was carried out with GitHub and Heroku. 
+Deployment and version control for the app was carried out with GitHub and Heroku.  
 
 #### Steps
 
@@ -362,7 +434,7 @@ Deployment and version control for the app was carried out with GitHub and Herok
 25. Import flash, render_template, redirect and request, and render a template to test the connection to the database
 27. Add, commit and push updates to GitHub. Creation of the app can now commence 
 28. To view the app in Heroku, log in, click on the app name and click on the 'Open App' button. You can also run "python3 app.py" via the GitPod terminal, and open in browser from the resulting port
-26. For final deployment, ensure that 'debug=False' in 'app.py'
+26. For final deployment, ensure that 'debug=False' in 'app.py'  
 
 
 ### **Credits and Acknowledgements**<a name="credits"></a>
@@ -373,16 +445,16 @@ Thank you once again to my mentor Spencer Barriball for his help, reminders, gui
 
 #### **Code**<a name="code"></a>
 The app was created by closely following Code Institute lessons and projects. Python functions, Flask and Jinja code was customised to ensure the app features functioned as desired. 
-Materialize was used to provide elements and classes and JQuery initialisations. Materialize helper classes were also used instead of media queries for responsivity.
+Materialize was used to provide elements and classes and JQuery initialisations. Materialize helper classes were also used instead of media queries for responsivity.  
 
 
 #### **Commits**<a name="commits"></a>
-After gratefully receiving feedback for previous projects, I have endeavoured to provide more frequent and relative commits, with the commit messages expressed in the imperative mood.
+After gratefully receiving feedback for previous projects, I have endeavoured to provide more frequent and relative commits, with the commit messages expressed in the imperative mood.  
 
 
 #### **Images**<a name="imagesa"></a>
 The background image was sourced from: https://blog.ohhdeer.com/home/wallpaper-of-the-month-may. 
-The recipe images were downloaded from [Unsplash](https://unsplash.com/) and [Pexels](https://pexels.com):
+The recipe images were downloaded from [Unsplash](https://unsplash.com/) and [Pexels](https://pexels.com):  
 | Name                                | Image                                       |
 | :---------------------------------- | :------------------------------------------ | 
 | Amirali Mirhashemian Grabowska           | Summer Berry Yoghurt Pots recipe image         |
@@ -392,7 +464,7 @@ The recipe images were downloaded from [Unsplash](https://unsplash.com/) and [Pe
 | Lisa (@welshie.wonders)               | Sardine and Tomato Toast recipe image                  |
 | Mariana Medvedeva                | Jonah's Rainbow Salad Jars recipe image                  |
 | Jackie Hope         | Chocolate Peanut Butter Squares recipe image                 |
-| Lina Osorio         | Fruity Muesli recipe image                 |
+| Lina Osorio         | Fruity Muesli recipe image                 |  
 
 
 #### **Text Content**<a name="textcontent"></a>
